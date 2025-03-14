@@ -1,0 +1,39 @@
+# ninja log v5
+173	6034	7388528790393251	CMakeFiles/Qtie.dir/main.cpp.obj	aa1743864d4a81d0
+14	141	7388529222369907	Qtie_autogen/timestamp	de55d517812ccb58
+14	141	7388529222369907	Qtie_autogen/mocs_compilation.cpp	de55d517812ccb58
+272	1311	7364252016997603	CMakeFiles/Qtie.dir/Domain.cpp.obj	7402addd681d9b1f
+124	1348	7382678858100459	CMakeFiles/Qtie.dir/Repository.cpp.obj	13054998c7d05ff7
+276	1030	7364252014207623	CMakeFiles/Qtie.dir/Error.cpp.obj	fda858ed40474cc8
+1033	1862	7364252022637611	CMakeFiles/Qtie.dir/Validator.cpp.obj	a3fe6e1bee54fa3a
+1862	2041	7364252024457630	CMakeFiles/Qtie.dir/Qtie_autogen/mocs_compilation.cpp.obj	6a548d4990cc524b
+145	1641	7374129429955415	CMakeFiles/Qtie.dir/ListaNotificare.cpp.obj	1273a1a85e2b6e44
+161	2512	7382805523132086	CMakeFiles/Qtie.dir/Service.cpp.obj	42e97ce28f78098e
+157	2466	7382805522672063	CMakeFiles/Qtie.dir/Teste.cpp.obj	ed1104907b567081
+165	657	7382805504601478	CMakeFiles/Qtie.dir/Observer.cpp.obj	90f370f2b726ac6e
+3045	3986	7388529258282570	Qtie.exe	f009860ec999ebc5
+177	7051	7388528800533669	CMakeFiles/Qtie.dir/GUI.cpp.obj	bb1a92ab729692d
+143	3045	7388529251382608	CMakeFiles/Qtie.dir/ModelView.cpp.obj	68e17ef87d0c75f6
+68	1665	7636740194993257	Qtie_autogen/timestamp	632d5e3f58051a5c
+68	1665	7636740194993257	Qtie_autogen/mocs_compilation.cpp	632d5e3f58051a5c
+68	1665	7636740194993257	E:/Folders/UBB An 1 sem 2/QtC++app/cmake-build-debug-coverage/Qtie_autogen/timestamp	632d5e3f58051a5c
+68	1665	7636740194993257	E:/Folders/UBB An 1 sem 2/QtC++app/cmake-build-debug-coverage/Qtie_autogen/mocs_compilation.cpp	632d5e3f58051a5c
+1671	5223	7636740230452990	CMakeFiles/Qtie.dir/Error.cpp.obj	5cfe6890d42d001b
+1665	5259	7636740230783984	CMakeFiles/Qtie.dir/Domain.cpp.obj	8be0bb94264dbbb2
+1675	6342	7636740241753642	CMakeFiles/Qtie.dir/ListaNotificare.cpp.obj	631a7494927a43c0
+1678	6580	7636740244111888	CMakeFiles/Qtie.dir/Repository.cpp.obj	22b51b9351ca9a5a
+6343	7042	7636740248757304	CMakeFiles/Qtie.dir/Validator.cpp.obj	67f6574127643b9c
+6581	7051	7636740248778075	CMakeFiles/Qtie.dir/Observer.cpp.obj	4176ae59532e1b9d
+7051	7140	7636740249753727	CMakeFiles/Qtie.dir/Qtie_autogen/mocs_compilation.cpp.obj	5f04feff43f356c
+1682	7589	7636740254212297	CMakeFiles/Qtie.dir/Service.cpp.obj	bf30cd0af13f259
+5223	8019	7636740258516423	CMakeFiles/Qtie.dir/Teste.cpp.obj	ee58fe8eb60fd1c4
+7042	11830	7636740296622579	CMakeFiles/Qtie.dir/ModelView.cpp.obj	9b430b39a532ec86
+1668	14820	7636740326548391	CMakeFiles/Qtie.dir/main.cpp.obj	bc090cdf3b98e546
+5260	15957	7636740337829278	CMakeFiles/Qtie.dir/GUI.cpp.obj	42e189c59135b823
+15957	25414	7636740369129852	Qtie.exe	88dbbf9e93c30d47
+8	174	7636749334806204	Qtie_autogen/timestamp	632d5e3f58051a5c
+8	174	7636749334806204	Qtie_autogen/mocs_compilation.cpp	632d5e3f58051a5c
+8	174	7636749334806204	E:/Folders/UBB An 1 sem 2/QtC++app/cmake-build-debug-coverage/Qtie_autogen/timestamp	632d5e3f58051a5c
+8	174	7636749334806204	E:/Folders/UBB An 1 sem 2/QtC++app/cmake-build-debug-coverage/Qtie_autogen/mocs_compilation.cpp	632d5e3f58051a5c
+176	4717	7636749380192432	CMakeFiles/Qtie.dir/GUI.cpp.obj	42e189c59135b823
+4717	7064	7636749386792249	Qtie.exe	88dbbf9e93c30d47

@@ -1,0 +1,79 @@
+        -:    0:Source:E:/Folders/UBB An 1 sem 2/Qtie/ListaNotificare.h
+        -:    0:Graph:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Teste.cpp.gcno
+        -:    0:Data:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Legion user on 03.05.2024.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef QTIE_LISTANOTIFICARE_H
+        -:    6:#define QTIE_LISTANOTIFICARE_H
+        -:    7:
+        -:    8:#include "Domain.h"
+        -:    9:#include <vector>
+        -:   10:#include <random>
+        -:   11:#include <string>
+        -:   12:#include <fstream>
+        -:   13:#include <algorithm>
+        -:   14:
+        -:   15:using std::vector;
+        -:   16:
+        -:   17:class ListaNotificare {
+        -:   18:private:
+        -:   19:    vector<Locatar> listaApartamente;
+        -:   20:public:
+function _ZN15ListaNotificareC1Ev called 0 returned 0% blocks executed 0%
+    #####:   21:    ListaNotificare()=default;
+    %%%%%:   21-block  0
+call    0 never executed
+        -:   22:    /*
+        -:   23:     * Functia goleste listaApartamente.
+        -:   24:     * Preconditii: adevarat.
+        -:   25:     * Postconditii: adevarat.
+        -:   26:     */
+        -:   27:    void goleste_lista();
+        -:   28:    /*
+        -:   29:     * Functia adauga in lista un nou apartament.
+        -:   30:     * Preconditii: apartament=Locatar&
+        -:   31:     * Postconditii: adevarat
+        -:   32:     */
+        -:   33:    void adauga_in_lista(Locatar &apartament);
+        -:   34:    /*
+        -:   35:     * Functia populeaza lista de notificari cu nr_apartamente apartamente
+        -:   36:     * extrase aleator din lista_locatari care nu se afla deja in lista de notificari.
+        -:   37:     * Preconditii: nr_apartamente=int > 0, lista_locatari=vector<Locatar>
+        -:   38:     * Postconditii: 0 daca operatia s-a efectuat corect, 1 daca nu au existat suficiente
+        -:   39:     * apartamente ramase
+        -:   40:     */
+        -:   41:    int genereaza_lista(const int& nr_apartamente, const vector<Locatar>& lista_locatari);
+        -:   42:    /*
+        -:   43:     * Functia salveaza datele din lista de notificari in format CSV.
+        -:   44:     * Preconditii: file_path = string
+        -:   45:     * Postconditii: adevarat
+        -:   46:     */
+        -:   47:    void export_CSV(const std::string& file_path);
+        -:   48:    /*
+        -:   49:     * Functia returneaza o copie a listei de apartamente.
+        -:   50:     * Preconditii: adevarat
+        -:   51:     * Postconditii: vector<Locatar>
+        -:   52:     */
+        -:   53:    //vector<Locatar> extrage_listaNotificari();
+        -:   54:    /*
+        -:   55:     * Functia returneaza numarul de elemente al lui listaApartamente.
+        -:   56:     * Preconditii: adevarat
+        -:   57:     * Postconditii: int > 0
+        -:   58:     */
+        -:   59:    int size();
+        -:   60:    /*
+        -:   61:     * Functia returneaza true/false daca exista un apartament in listaApartamente
+        -:   62:     * cu numarul de apartament dat ca parametru.
+        -:   63:     * Preconditii: nr_apartament = int > 0
+        -:   64:     * Postconditii: true daca exista, false daca nu exista
+        -:   65:     */
+        -:   66:    bool cautare_apartament(const int& nr_apartament);
+        -:   67:};
+        -:   68:
+        -:   69:
+        -:   70:
+        -:   71:
+        -:   72:#endif //QTIE_LISTANOTIFICARE_H

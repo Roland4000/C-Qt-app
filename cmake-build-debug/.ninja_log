@@ -1,0 +1,13 @@
+# ninja log v5
+260	1811	7364251822434621	CMakeFiles/Qtie.dir/main.cpp.obj	1a97ece638ede8b8
+122	257	7364251806884633	Qtie_autogen/timestamp	b15f2c1ce4aabcef
+122	257	7364251806884633	Qtie_autogen/mocs_compilation.cpp	b15f2c1ce4aabcef
+232	317	7363489592372567	CMakeFiles/Qtie.dir/Qtie_autogen/mocs_compilation.cpp.obj	f8c182d3a9d4b767
+2584	3153	7364251833776569	Qtie.exe	5097e081cf801cf8
+280	1546	7364251819754644	CMakeFiles/Qtie.dir/Repository.cpp.obj	8303ce27d35d6586
+267	875	7364251813054640	CMakeFiles/Qtie.dir/Error.cpp.obj	c803c0a6883dbdfb
+271	1068	7364251814994642	CMakeFiles/Qtie.dir/Domain.cpp.obj	44fb757531b1e0b2
+1068	1625	7364251820564669	CMakeFiles/Qtie.dir/Validator.cpp.obj	2c02eb7243ba071d
+264	1793	7364251822224706	CMakeFiles/Qtie.dir/ListaNotificare.cpp.obj	f527c29b1e834873
+276	2403	7364251828314908	CMakeFiles/Qtie.dir/Service.cpp.obj	ac3864d1d588e090
+875	2583	7364251830115034	CMakeFiles/Qtie.dir/Teste.cpp.obj	f0a90e0769f31fb1

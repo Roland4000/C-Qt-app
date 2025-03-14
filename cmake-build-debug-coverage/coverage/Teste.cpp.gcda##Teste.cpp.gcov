@@ -1,0 +1,3054 @@
+        -:    0:Source:E:/Folders/UBB An 1 sem 2/Qtie/Teste.cpp
+        -:    0:Graph:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Teste.cpp.gcno
+        -:    0:Data:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Teste.h"
+        -:    2:#include <iostream>
+        -:    3:using namespace std;
+function _ZN5Teste13run_all_testsEv called 1 returned 100% blocks executed 100%
+        1:    4:void Teste::run_all_tests() {
+        1:    5:    test_creaza_locatar();
+        1:    5-block  0
+call    0 returned 1
+        1:    6:    test_adaugare_stergere_Locatar_repo();
+call    0 returned 1
+        1:    7:    test_actualizare_Locatar_repo();
+call    0 returned 1
+        1:    8:    test_validare_Locatar();
+call    0 returned 1
+        1:    9:    test_cautareID();
+call    0 returned 1
+        1:   10:    test_adaugare_stergere_Locatar_service();
+call    0 returned 1
+        1:   11:    test_actualizare_Locatar_service();
+call    0 returned 1
+        1:   12:    test_eroare();
+call    0 returned 1
+        1:   13:    test_copiere_VD();
+call    0 returned 1
+        1:   14:    test_constructor_copiere_locatar();
+call    0 returned 1
+        1:   15:    test_filtrare_locatari_tip_service();
+call    0 returned 1
+        1:   16:    test_filtrare_locatari_sup_service();
+call    0 returned 1
+        1:   17:    test_sortare_locatari_nume_service();
+call    0 returned 1
+        1:   18:    test_sortare_locatari_suprafata_service();
+call    0 returned 1
+        1:   19:    test_sortare_locatari_tip_suprafata_service();
+call    0 returned 1
+        1:   20:    test_lista_notificare_adaugare_golire();
+call    0 returned 1
+        1:   21:    test_generare_lista_random();
+call    0 returned 1
+        1:   22:    test_export_CSV();
+call    0 returned 1
+        1:   23:    test_extrage_frecvente();
+call    0 returned 1
+        1:   24:    test_Undo();
+call    0 returned 1
+        1:   25:    test_export_ListaLocatari();
+call    0 returned 1
+        1:   26:    test_copiere_afisare_stergere_modificare_filelocatar();
+call    0 returned 1
+        1:   27:}
+        -:   28:
+function _ZN5Teste19test_creaza_locatarEv called 1 returned 100% blocks executed 57%
+        1:   29:void Teste::test_creaza_locatar() {
+        1:   30:    int apartament=22;
+        1:   30-block  0
+        1:   31:    string proprietar="Ion";
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   31-block  1
+        1:   32:    int suprafata=100;
+        1:   33:    string tip="Da";
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   33-block  1
+        1:   34:    Locatar locatar=Locatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   35:    assert(locatar.get_apartament()==apartament);
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   35-block  2
+call    5 never executed
+        1:   35-block  3
+       1*:   36:    assert(locatar.get_tip()==tip);
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   36-block  2
+call    6 never executed
+        1:   36-block  3
+        1:   36-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   36-block  5
+call    9 returned 1
+    $$$$$:   36-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   36-block  7
+call   12 never executed
+    $$$$$:   36-block  8
+       1*:   37:    assert(locatar.get_proprietar()==proprietar);
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   37-block  2
+call    6 never executed
+        1:   37-block  3
+        1:   37-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   37-block  5
+call    9 returned 1
+    $$$$$:   37-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   37-block  7
+call   12 never executed
+    $$$$$:   37-block  8
+       1*:   38:    assert(locatar.get_suprafata()==suprafata);
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   38-block  2
+call    5 never executed
+        1:   38-block  3
+        -:   39:
+        2:   40:    string proprietar1="M";
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   40-block  1
+        1:   41:    string tip1="Nu";
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   41-block  1
+        1:   42:    locatar.set_tip(tip1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43:    locatar.set_apartament(1);
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   43-block  1
+        1:   44:    locatar.set_proprietar(proprietar1);
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45:    locatar.set_suprafata(12);
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   45-block  1
+        -:   46:
+       1*:   47:    assert(locatar.get_apartament()==1);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   47-block  2
+call    5 never executed
+        1:   47-block  3
+       1*:   48:    assert(locatar.get_tip()==tip1);
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   48-block  2
+call    6 never executed
+        1:   48-block  3
+        1:   48-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   48-block  5
+call    9 returned 1
+    $$$$$:   48-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   48-block  7
+call   12 never executed
+    $$$$$:   48-block  8
+       1*:   49:    assert(locatar.get_proprietar()==proprietar1);
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   49-block  2
+call    6 never executed
+        1:   49-block  3
+        1:   49-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   49-block  5
+call    9 returned 1
+    $$$$$:   49-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   49-block  7
+call   12 never executed
+    $$$$$:   49-block  8
+       1*:   50:    assert(locatar.get_suprafata()==12);
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   50-block  2
+call    5 never executed
+        1:   50-block  3
+        -:   51:
+        1:   52:}
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:   52-block  1
+call    5 never executed
+    $$$$$:   52-block  2
+call    6 never executed
+    $$$$$:   52-block  3
+call    7 never executed
+    $$$$$:   52-block  4
+call    8 never executed
+    $$$$$:   52-block  5
+call    9 never executed
+        -:   53:
+function _ZN5Teste35test_adaugare_stergere_Locatar_repoEv called 1 returned 100% blocks executed 60%
+        1:   54:void Teste::test_adaugare_stergere_Locatar_repo(){
+        1:   55:    int apartament=22;
+        1:   55-block  0
+        1:   56:    string proprietar="Ion";
+        1:   56-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   56-block  1
+        1:   57:    int suprafata=100;
+        1:   58:    string tip="Da";
+        1:   58-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   58-block  1
+        1:   59:    Locatar locatar=Locatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   60:    assert(locatar.get_apartament()==apartament);
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   60-block  2
+call    5 never executed
+        1:   60-block  3
+       1*:   61:    assert(locatar.get_tip()==tip);
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   61-block  2
+call    6 never executed
+        1:   61-block  3
+        1:   61-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   61-block  5
+call    9 returned 1
+    $$$$$:   61-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   61-block  7
+call   12 never executed
+    $$$$$:   61-block  8
+       1*:   62:    assert(locatar.get_proprietar()==proprietar);
+        1:   62-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   62-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   62-block  2
+call    6 never executed
+        1:   62-block  3
+        1:   62-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   62-block  5
+call    9 returned 1
+    $$$$$:   62-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   62-block  7
+call   12 never executed
+    $$$$$:   62-block  8
+       1*:   63:    assert(locatar.get_suprafata()==suprafata);
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   63-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   63-block  2
+call    5 never executed
+        1:   63-block  3
+        -:   64:
+        1:   65:    Repository repo=Repository();
+        1:   65-block  0
+call    0 returned 1
+        1:   66:    repo.adaugareLocatar(locatar);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   67:    vector<Locatar> Locatari=repo.extrage_Locatari();
+        1:   67-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   68:    assert(Locatari.size()==1);
+        1:   68-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   68-block  1
+call    3 never executed
+        1:   68-block  2
+       1*:   69:    assert(Locatari[0].get_tip()==tip);
+        1:   69-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   69-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   69-block  2
+call    7 never executed
+        1:   69-block  3
+        1:   69-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+        1:   69-block  5
+call   10 returned 1
+    $$$$$:   69-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   69-block  7
+call   13 never executed
+    $$$$$:   69-block  8
+       1*:   70:    assert(Locatari[0].get_apartament()==apartament);
+        1:   70-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   70-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   70-block  2
+call    6 never executed
+        1:   70-block  3
+       1*:   71:    assert(Locatari[0].get_proprietar()==proprietar);
+        1:   71-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   71-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   71-block  2
+call    7 never executed
+        1:   71-block  3
+        1:   71-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+        1:   71-block  5
+call   10 returned 1
+    $$$$$:   71-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   71-block  7
+call   13 never executed
+    $$$$$:   71-block  8
+       1*:   72:    assert(Locatari[0].get_suprafata()==suprafata);
+        1:   72-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   72-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   72-block  2
+call    6 never executed
+        1:   72-block  3
+        1:   73:    repo.stergereLocatar(22);
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   73-block  1
+        1:   74:    vector<Locatar> Locatari2=repo.extrage_Locatari();
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   75:
+       1*:   76:    assert(Locatari2.empty());
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   76-block  1
+call    3 never executed
+        1:   76-block  2
+        1:   77:}
+        1:   77-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:   77-block  1
+call    6 never executed
+    $$$$$:   77-block  2
+call    7 never executed
+    $$$$$:   77-block  3
+call    8 never executed
+    $$$$$:   77-block  4
+call    9 never executed
+    $$$$$:   77-block  5
+call   10 never executed
+    $$$$$:   77-block  6
+call   11 never executed
+        -:   78:
+function _ZN5Teste29test_actualizare_Locatar_repoEv called 1 returned 100% blocks executed 53%
+        1:   79:void Teste::test_actualizare_Locatar_repo(){
+        1:   80:    int apartament=22;
+        1:   80-block  0
+        1:   81:    string proprietar="Ion";
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   81-block  1
+        1:   82:    int suprafata=100;
+        1:   83:    string tip="Da";
+        1:   83-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   83-block  1
+        1:   84:    Locatar locatar=Locatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   85:
+        2:   86:    string proprietar1="M";
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   86-block  1
+        1:   87:    string tip1="Nu";
+        1:   87-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   87-block  1
+        1:   88:    Locatar locatar1=Locatar(23,proprietar1,200,tip1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   89:    Repository repo=Repository();
+        1:   89-block  0
+call    0 returned 1
+        1:   90:    repo.adaugareLocatar(locatar);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   91:    repo.adaugareLocatar(locatar1);
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   92:    repo.actualizareLocatar(23,"Gigel",120,"Kl");
+        1:   92-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   92-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   92-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   92-block  3
+call    9 returned 1
+call   10 returned 1
+    $$$$$:   92-block  4
+call   11 never executed
+    $$$$$:   92-block  5
+    $$$$$:   92-block  6
+    $$$$$:   92-block  7
+call   12 never executed
+    $$$$$:   92-block  8
+    $$$$$:   92-block  9
+        1:   93:    vector<Locatar> Locatari=repo.extrage_Locatari();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   94:    assert(Locatari[1].get_suprafata()==120);
+        1:   94-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   94-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   94-block  2
+call    6 never executed
+        1:   94-block  3
+        1:   95:}
+        1:   95-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+    $$$$$:   95-block  1
+call    8 never executed
+    $$$$$:   95-block  2
+call    9 never executed
+    $$$$$:   95-block  3
+call   10 never executed
+    $$$$$:   95-block  4
+call   11 never executed
+    $$$$$:   95-block  5
+call   12 never executed
+    $$$$$:   95-block  6
+call   13 never executed
+    $$$$$:   95-block  7
+call   14 never executed
+    $$$$$:   95-block  8
+call   15 never executed
+        -:   96:
+function _ZN5Teste21test_validare_LocatarEv called 1 returned 100% blocks executed 67%
+        1:   97:void Teste::test_validare_Locatar() {
+        1:   98:    int apartament=22;
+        1:   98-block  0
+        2:   99:    string proprietar="Ion";
+        1:   99-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   99-block  1
+        1:  100:    string tip="duplex";
+        1:  100-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  100-block  1
+        1:  101:    int suprafata=100;
+       1*:  102:    assert(Validator::valideazaLocatar(apartament,proprietar,suprafata,tip)==true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  102-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  102-block  1
+call    5 never executed
+        1:  102-block  2
+        -:  103:    try{
+       4*:  104:        Validator::valideazaLocatar(-1,"",-2,"");
+        1:  104-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  104-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  104-block  2
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1 (throw)
+    %%%%%:  104-block  3
+call    9 never executed
+call   10 never executed
+        1:  104-block  4
+call   11 returned 1
+        1:  104-block  5
+        1:  104-block  6
+        1:  104-block  7
+call   12 returned 1
+        1:  104-block  8
+        1:  104-block  9
+    #####:  105:        assert(false);
+call    0 never executed
+        -:  106:    }
+        1:  107:    catch(Error& er){
+        1:  107-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  107-block  1
+call    2 returned 1
+        1:  108:        assert(er.getMessage()=="Apartament <=0\nTip vid!\nProprietar vid!\nSuprafata <=0!\n");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  108-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  108-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:  108-block  2
+call    8 never executed
+        1:  108-block  3
+        1:  109:    }
+        1:  109-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  109-block  1
+call    3 never executed
+        1:  110:}
+        1:  110-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  110-block  1
+call    2 never executed
+    $$$$$:  110-block  2
+call    3 never executed
+        -:  111:
+function _ZN5Teste14test_cautareIDEv called 1 returned 100% blocks executed 55%
+        1:  112:void Teste::test_cautareID() {
+        1:  113:    int apartament=22;
+        1:  113-block  0
+        1:  114:    string proprietar="Marcel";
+        1:  114-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  114-block  1
+        1:  115:    int suprafata=200;
+        1:  116:    string tip="duplex";
+        1:  116-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  116-block  1
+        1:  117:    Locatar locatar=Locatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  118:
+        2:  119:    string proprietar1="Ion";
+        1:  119-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  119-block  1
+        1:  120:    string tip1="igen";
+        1:  120-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  120-block  1
+        -:  121:
+        1:  122:    Locatar Locatar1=Locatar(24,proprietar1,220,tip1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  123:    Repository repo=Repository();
+        1:  123-block  0
+call    0 returned 1
+        1:  124:    repo.adaugareLocatar(locatar);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  125:    repo.adaugareLocatar(Locatar1);
+        1:  125-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  126:    assert(repo.cautareApartament(24)==true);
+        1:  126-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  126-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  126-block  2
+call    5 never executed
+        1:  126-block  3
+    $$$$$:  126-block  4
+       1*:  127:    assert(repo.cautareApartament(4)==false);
+        1:  127-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  127-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  127-block  2
+call    5 never executed
+        1:  127-block  3
+    $$$$$:  127-block  4
+        1:  128:}
+        1:  128-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:  128-block  1
+call    7 never executed
+    $$$$$:  128-block  2
+call    8 never executed
+    $$$$$:  128-block  3
+call    9 never executed
+    $$$$$:  128-block  4
+call   10 never executed
+    $$$$$:  128-block  5
+call   11 never executed
+    $$$$$:  128-block  6
+call   12 never executed
+    $$$$$:  128-block  7
+call   13 never executed
+        -:  129:
+function _ZN5Teste38test_adaugare_stergere_Locatar_serviceEv called 1 returned 100% blocks executed 59%
+        1:  130:void Teste::test_adaugare_stergere_Locatar_service(){
+        1:  131:    Repository repo=Repository();
+        1:  131-block  0
+call    0 returned 1
+        1:  132:    ListaNotificare listaNotificare;
+call    0 returned 1
+        1:  133:    Service service=Service(repo,listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  134:
+        1:  135:    int apartament=22;
+        1:  135-block  0
+        1:  136:    string proprietar="Marcel";
+        1:  136-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  136-block  1
+        1:  137:    int suprafata=200;
+        1:  138:    string tip="duplex";
+        1:  138-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  138-block  1
+        -:  139:
+        1:  140:    service.adaugareLocatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  141:    vector<Locatar> Locatare=service.extrage_Locatari();
+        1:  141-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  142:    assert(Locatare.size()==1);
+        1:  142-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  142-block  1
+call    3 never executed
+        1:  142-block  2
+       1*:  143:    assert(Locatare[0].get_suprafata()==suprafata);
+        1:  143-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  143-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  143-block  2
+call    6 never executed
+        1:  143-block  3
+        -:  144:
+        1:  145:    int apartament1=23;
+        1:  145-block  0
+        1:  146:    string proprietar1="Marceli";
+        1:  146-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  146-block  1
+        1:  147:    int suprafata1=2002;
+        1:  148:    string tip1="dup";
+        1:  148-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  148-block  1
+        1:  149:    service.adaugareLocatar(apartament1,proprietar1,suprafata1,tip1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  150:    try {
+        1:  151:        service.adaugareLocatar(apartament1, proprietar1, suprafata1, tip1);
+        1:  151-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        -:  152:    }
+        1:  153:    catch(Error& er){
+        1:  153-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  153-block  1
+call    2 returned 1
+        -:  154:        assert(true);
+        1:  155:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  156:    try {
+       1*:  157:        service.stergereLocatar(6);
+        1:  157-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  157-block  1
+    #####:  158:        assert(false);
+    %%%%%:  158-block  0
+call    0 never executed
+        -:  159:    }
+        1:  160:    catch(Error& er){
+        1:  160-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  160-block  1
+call    2 returned 1
+        -:  161:        assert(true);
+        1:  162:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  163:    service.stergereLocatar(22);
+        1:  163-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  163-block  1
+        1:  164:    vector<Locatar> Locatare1=service.extrage_Locatari();
+        1:  164-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  165:    assert(Locatare1.size()==1);
+        1:  165-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    $$$$$:  165-block  1
+call    3 never executed
+        1:  165-block  2
+        1:  166:}
+        1:  166-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  166-block  1
+call    9 never executed
+    $$$$$:  166-block  2
+call   10 never executed
+    $$$$$:  166-block  3
+call   11 never executed
+    $$$$$:  166-block  4
+call   12 never executed
+    $$$$$:  166-block  5
+call   13 never executed
+    $$$$$:  166-block  6
+call   14 never executed
+    $$$$$:  166-block  7
+call   15 never executed
+    $$$$$:  166-block  8
+call   16 never executed
+    $$$$$:  166-block  9
+call   17 never executed
+        -:  167:
+function _ZN5Teste32test_actualizare_Locatar_serviceEv called 1 returned 100% blocks executed 55%
+        1:  168:void Teste::test_actualizare_Locatar_service(){
+        1:  169:    Repository repo;
+        1:  169-block  0
+call    0 returned 1
+        2:  170:    string proprietar0="An";
+        1:  170-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  170-block  1
+        1:  171:    string tip0="su[";
+        1:  171-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  171-block  1
+        1:  172:    ListaNotificare listaNotificare;
+call    0 returned 1
+        1:  173:    Service service=Service(repo,listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  174:    try{
+        1:  175:        service.actualizareLocatar(15,proprietar0,2020,tip0);
+        1:  175-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:  176:        assert(false);
+    %%%%%:  176-block  0
+call    0 never executed
+        -:  177:    }
+        1:  178:    catch(Error& er){
+        1:  178-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  178-block  1
+call    2 returned 1
+        -:  179:        assert(true);
+        1:  180:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  181:
+        1:  182:    int apartament=22;
+        1:  182-block  0
+        1:  183:    string proprietar="Marcel";
+        1:  183-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  183-block  1
+        1:  184:    int suprafata=200;
+        2:  185:    string tip="duplex";
+        1:  185-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  185-block  1
+        2:  186:    string proprietar1="Ion";
+        1:  186-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  186-block  1
+        1:  187:    string tip1="sup";
+        1:  187-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  187-block  1
+        1:  188:    service.adaugareLocatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  189:    service.actualizareLocatar(22,proprietar1,202,tip1);
+        1:  189-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  190:    vector<Locatar> locatari=service.extrage_Locatari();
+        1:  190-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  191:    assert(locatari[0].get_suprafata()==202);
+        1:  191-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  191-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  191-block  2
+call    6 never executed
+        1:  191-block  3
+        1:  192:    assert(locatari[0].get_proprietar()=="Ion");
+        1:  192-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  192-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  192-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    $$$$$:  192-block  3
+call    9 never executed
+        1:  192-block  4
+        1:  192-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  192-block  6
+call   12 returned 1
+    $$$$$:  192-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  192-block  8
+call   15 never executed
+    $$$$$:  192-block  9
+        1:  193:}
+        1:  193-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+    $$$$$:  193-block  1
+call   10 never executed
+    $$$$$:  193-block  2
+call   11 never executed
+    $$$$$:  193-block  3
+call   12 never executed
+    $$$$$:  193-block  4
+call   13 never executed
+    $$$$$:  193-block  5
+call   14 never executed
+    $$$$$:  193-block  6
+call   15 never executed
+    $$$$$:  193-block  7
+call   16 never executed
+    $$$$$:  193-block  8
+call   17 never executed
+    $$$$$:  193-block  9
+call   18 never executed
+    $$$$$:  193-block 10
+call   19 never executed
+        -:  194:
+function _ZN5Teste11test_eroareEv called 1 returned 100% blocks executed 65%
+        1:  195:void Teste::test_eroare() {
+        1:  195-block  0
+        1:  196:    Error er= Error("Eroare de sistem");
+        1:  196-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  196-block  1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:  196-block  2
+    $$$$$:  196-block  3
+       1*:  197:    assert("Eroare de sistem"==er.getMessage());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  197-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  197-block  1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  197-block  2
+call    8 never executed
+        1:  197-block  3
+        1:  198:}
+        1:  198-block  0
+call    0 returned 1
+    $$$$$:  198-block  1
+call    1 never executed
+        -:  199:
+function _ZN5Teste15test_copiere_VDEv called 1 returned 100% blocks executed 63%
+        1:  200:void Teste::test_copiere_VD() {
+        1:  201:    vector<int> v;
+        1:  201-block  0
+call    0 returned 1
+        1:  202:    v.push_back(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  202-block  0
+        1:  203:    v.push_back(2);
+        1:  203-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  203-block  1
+        1:  204:    vector<int> v2=v;
+        1:  204-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  205:    assert(v2[0]==v[0]);
+        1:  205-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  205-block  1
+call    4 never executed
+        1:  205-block  2
+        1:  206:}
+        1:  206-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  206-block  1
+call    2 never executed
+    $$$$$:  206-block  2
+call    3 never executed
+        -:  207:
+        -:  208:
+function _ZN5Teste32test_constructor_copiere_locatarEv called 1 returned 100% blocks executed 56%
+        1:  209:void Teste::test_constructor_copiere_locatar() {
+        1:  210:    Locatar l = Locatar();
+        1:  210-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  211:    string m="M";
+        1:  211-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  211-block  1
+        1:  212:    string d="D";
+        1:  212-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  212-block  1
+        1:  213:    Locatar l1(23,m,23,d);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  214:    Locatar l2 = l1;
+        1:  214-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  215:    assert(l2.get_suprafata()==l1.get_suprafata());
+        1:  215-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  215-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  215-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  215-block  3
+call    8 never executed
+        1:  215-block  4
+        1:  216:}
+        1:  216-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:  216-block  1
+call    5 never executed
+    $$$$$:  216-block  2
+call    6 never executed
+    $$$$$:  216-block  3
+call    7 never executed
+    $$$$$:  216-block  4
+call    8 never executed
+    $$$$$:  216-block  5
+call    9 never executed
+        -:  217:
+function _ZN5Teste34test_filtrare_locatari_tip_serviceEv called 1 returned 100% blocks executed 56%
+        1:  218:void Teste::test_filtrare_locatari_tip_service(){
+        1:  219:    Repository repo=Repository();
+        1:  219-block  0
+call    0 returned 1
+        1:  220:    ListaNotificare listaNotificare;
+call    0 returned 1
+        1:  221:    Service service=Service(repo,listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  222:
+        1:  223:    int apartament=22;
+        1:  223-block  0
+        1:  224:    string proprietar="Marcel";
+        1:  224-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  224-block  1
+        1:  225:    int suprafata=200;
+        1:  226:    string tip="duplex";
+        1:  226-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  226-block  1
+        -:  227:
+        1:  228:    service.adaugareLocatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  229:    vector<Locatar> locatari=service.filtreaza_locatari_tip_service(tip);
+        1:  229-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  230:    assert(locatari.size()==1);
+        1:  230-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  230-block  1
+call    3 never executed
+        1:  230-block  2
+        1:  231:}
+        1:  231-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  231-block  1
+call    6 never executed
+    $$$$$:  231-block  2
+call    7 never executed
+    $$$$$:  231-block  3
+call    8 never executed
+    $$$$$:  231-block  4
+call    9 never executed
+    $$$$$:  231-block  5
+call   10 never executed
+    $$$$$:  231-block  6
+call   11 never executed
+        -:  232:
+function _ZN5Teste34test_filtrare_locatari_sup_serviceEv called 1 returned 100% blocks executed 55%
+        1:  233:void Teste::test_filtrare_locatari_sup_service(){
+        1:  234:    Repository repo=Repository();
+        1:  234-block  0
+call    0 returned 1
+        1:  235:    ListaNotificare listaNotificare;
+call    0 returned 1
+        1:  236:    Service service=Service(repo,listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  237:
+        1:  238:    int apartament=22;
+        1:  238-block  0
+        1:  239:    string proprietar="Marcel";
+        1:  239-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  239-block  1
+        1:  240:    int suprafata=200;
+        1:  241:    string tip="duplex";
+        1:  241-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  241-block  1
+        -:  242:
+        1:  243:    service.adaugareLocatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  244:    vector<Locatar> locatari=service.filtreaza_locatari_sup_service(220);
+        1:  244-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  244-block  1
+       1*:  245:    assert(locatari.size()==1);
+        1:  245-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  245-block  1
+call    3 never executed
+        1:  245-block  2
+        1:  246:}
+        1:  246-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  246-block  1
+call    6 never executed
+    $$$$$:  246-block  2
+call    7 never executed
+    $$$$$:  246-block  3
+call    8 never executed
+    $$$$$:  246-block  4
+call    9 never executed
+    $$$$$:  246-block  5
+call   10 never executed
+    $$$$$:  246-block  6
+call   11 never executed
+        -:  247:
+function _ZN5Teste34test_sortare_locatari_nume_serviceEv called 1 returned 100% blocks executed 55%
+        1:  248:void Teste::test_sortare_locatari_nume_service(){
+        1:  249:    Repository repo=Repository();
+        1:  249-block  0
+call    0 returned 1
+        1:  250:    ListaNotificare listaNotificare;
+call    0 returned 1
+        1:  251:    Service service=Service(repo,listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  252:
+        -:  253:
+        1:  254:    int apartament=22;
+        1:  254-block  0
+        1:  255:    string proprietar="Marcel";
+        1:  255-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  255-block  1
+        1:  256:    int suprafata=200;
+        1:  257:    string tip="duplex";
+        1:  257-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  257-block  1
+        -:  258:
+        -:  259:
+        1:  260:    int apartament1=23;
+        1:  261:    string proprietar1="Costi";
+        1:  261-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  261-block  1
+        1:  262:    int suprafata1=200;
+        1:  263:    string tip1="duplex";
+        1:  263-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  263-block  1
+        -:  264:
+        1:  265:    service.adaugareLocatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  266:    service.adaugareLocatar(apartament1,proprietar1,suprafata1,tip1);
+        1:  266-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  267:    vector<Locatar> locatari=service.sorteaza_locatari_nume_service();
+        1:  267-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  268:    assert(locatari[0].get_proprietar()=="Costi");
+        1:  268-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  268-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  268-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  268-block  3
+call    9 never executed
+        1:  268-block  4
+        1:  268-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  268-block  6
+call   12 returned 1
+    $$$$$:  268-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  268-block  8
+call   15 never executed
+    $$$$$:  268-block  9
+       1*:  269:    assert(locatari[1].get_proprietar()=="Marcel");
+        1:  269-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  269-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  269-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  269-block  3
+call    9 never executed
+        1:  269-block  4
+        1:  269-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  269-block  6
+call   12 returned 1
+    $$$$$:  269-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  269-block  8
+call   15 never executed
+    $$$$$:  269-block  9
+        1:  270:}
+        1:  270-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+    $$$$$:  270-block  1
+call    8 never executed
+    $$$$$:  270-block  2
+call    9 never executed
+    $$$$$:  270-block  3
+call   10 never executed
+    $$$$$:  270-block  4
+call   11 never executed
+    $$$$$:  270-block  5
+call   12 never executed
+    $$$$$:  270-block  6
+call   13 never executed
+    $$$$$:  270-block  7
+call   14 never executed
+    $$$$$:  270-block  8
+call   15 never executed
+function _ZN5Teste39test_sortare_locatari_suprafata_serviceEv called 1 returned 100% blocks executed 55%
+        1:  271:void Teste::test_sortare_locatari_suprafata_service(){
+        1:  272:    Repository repo=Repository();
+        1:  272-block  0
+call    0 returned 1
+        1:  273:    ListaNotificare listaNotificare;
+call    0 returned 1
+        1:  274:    Service service=Service(repo,listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  275:
+        1:  276:    int apartament=22;
+        1:  276-block  0
+        1:  277:    string proprietar="Marcel";
+        1:  277-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  277-block  1
+        1:  278:    int suprafata=200;
+        1:  279:    string tip="duplex";
+        1:  279-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  279-block  1
+        -:  280:
+        1:  281:    int apartament1=23;
+        1:  282:    string proprietar1="Costi";
+        1:  282-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  282-block  1
+        1:  283:    int suprafata1=120;
+        1:  284:    string tip1="duplex";
+        1:  284-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  284-block  1
+        -:  285:
+        1:  286:    service.adaugareLocatar(apartament,proprietar,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  287:    service.adaugareLocatar(apartament1,proprietar1,suprafata1,tip1);
+        1:  287-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  288:    vector<Locatar> locatari=service.sorteaza_locatari_suprafata_service();
+        1:  288-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  289:    assert(locatari[0].get_proprietar()=="Costi");
+        1:  289-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  289-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  289-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  289-block  3
+call    9 never executed
+        1:  289-block  4
+        1:  289-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  289-block  6
+call   12 returned 1
+    $$$$$:  289-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  289-block  8
+call   15 never executed
+    $$$$$:  289-block  9
+       1*:  290:    assert(locatari[1].get_proprietar()=="Marcel");
+        1:  290-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  290-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  290-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  290-block  3
+call    9 never executed
+        1:  290-block  4
+        1:  290-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  290-block  6
+call   12 returned 1
+    $$$$$:  290-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  290-block  8
+call   15 never executed
+    $$$$$:  290-block  9
+        1:  291:}
+        1:  291-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+    $$$$$:  291-block  1
+call    8 never executed
+    $$$$$:  291-block  2
+call    9 never executed
+    $$$$$:  291-block  3
+call   10 never executed
+    $$$$$:  291-block  4
+call   11 never executed
+    $$$$$:  291-block  5
+call   12 never executed
+    $$$$$:  291-block  6
+call   13 never executed
+    $$$$$:  291-block  7
+call   14 never executed
+    $$$$$:  291-block  8
+call   15 never executed
+function _ZN5Teste43test_sortare_locatari_tip_suprafata_serviceEv called 1 returned 100% blocks executed 55%
+        1:  292:void Teste::test_sortare_locatari_tip_suprafata_service(){
+        1:  293:    Repository repo=Repository();
+        1:  293-block  0
+call    0 returned 1
+        1:  294:    ListaNotificare listaNotificare;
+call    0 returned 1
+        1:  295:    Service service=Service(repo,listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  296:
+        1:  297:    int apartament2=22;
+        1:  297-block  0
+        1:  298:    string proprietar2="Ion";
+        1:  298-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  298-block  1
+        1:  299:    int suprafata2=120;
+        1:  300:    string tip2="t";
+        1:  300-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  300-block  1
+        -:  301:
+        1:  302:    int apartament=23;
+        1:  303:    string proprietar="Marcel";
+        1:  303-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  303-block  1
+        1:  304:    int suprafata=200;
+        1:  305:    string tip="duplex";
+        1:  305-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  305-block  1
+        -:  306:
+        1:  307:    int apartament1=24;
+        1:  308:    string proprietar1="Costi";
+        1:  308-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  308-block  1
+        1:  309:    int suprafata1=120;
+        1:  310:    string tip1="duplex";
+        1:  310-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  310-block  1
+        -:  311:
+        1:  312:    service.adaugareLocatar(apartament2,proprietar2,suprafata2,tip2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  313:    service.adaugareLocatar(apartament,proprietar,suprafata,tip);
+        1:  313-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  314:    service.adaugareLocatar(apartament1,proprietar1,suprafata1,tip1);
+        1:  314-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  315:    vector<Locatar> locatari=service.sorteaza_locatari_tip_suprafata_service();
+        1:  315-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  316:    assert(locatari[0].get_proprietar()=="Costi");
+        1:  316-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  316-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  316-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  316-block  3
+call    9 never executed
+        1:  316-block  4
+        1:  316-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  316-block  6
+call   12 returned 1
+    $$$$$:  316-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  316-block  8
+call   15 never executed
+    $$$$$:  316-block  9
+       1*:  317:    assert(locatari[1].get_proprietar()=="Marcel");
+        1:  317-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  317-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  317-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  317-block  3
+call    9 never executed
+        1:  317-block  4
+        1:  317-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  317-block  6
+call   12 returned 1
+    $$$$$:  317-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  317-block  8
+call   15 never executed
+    $$$$$:  317-block  9
+       1*:  318:    assert(locatari[2].get_proprietar()=="Ion");
+        1:  318-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  318-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  318-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  318-block  3
+call    9 never executed
+        1:  318-block  4
+        1:  318-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  318-block  6
+call   12 returned 1
+    $$$$$:  318-block  7
+branch 13 never executed (fallthrough)
+branch 14 never executed
+    $$$$$:  318-block  8
+call   15 never executed
+    $$$$$:  318-block  9
+        1:  319:}
+        1:  319-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+    $$$$$:  319-block  1
+call   10 never executed
+    $$$$$:  319-block  2
+call   11 never executed
+    $$$$$:  319-block  3
+call   12 never executed
+    $$$$$:  319-block  4
+call   13 never executed
+    $$$$$:  319-block  5
+call   14 never executed
+    $$$$$:  319-block  6
+call   15 never executed
+    $$$$$:  319-block  7
+call   16 never executed
+    $$$$$:  319-block  8
+call   17 never executed
+    $$$$$:  319-block  9
+call   18 never executed
+    $$$$$:  319-block 10
+call   19 never executed
+        -:  320:
+function _ZN5Teste37test_lista_notificare_adaugare_golireEv called 1 returned 100% blocks executed 62%
+        1:  321:void Teste::test_lista_notificare_adaugare_golire() {
+        1:  322:    Repository repo = Repository();
+        1:  322-block  0
+call    0 returned 1
+        1:  323:    ListaNotificare listaNotificare = ListaNotificare();
+call    0 returned 1
+        1:  324:    Service service = Service(repo, listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  325:    int apartament = 5;
+        1:  326:    int suprafata = 120;
+        1:  326-block  0
+        2:  327:    string nume = "Marcel";
+        1:  327-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  327-block  1
+        1:  328:    string tip = "duplex";
+        1:  328-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  328-block  1
+        1:  329:    service.adaugareLocatar(apartament, nume, suprafata, tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  330:    try {
+       1*:  331:        service.adauga_lista_notificari(6);
+        1:  331-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  331-block  1
+    #####:  332:        assert(false);
+    %%%%%:  332-block  0
+call    0 never executed
+        -:  333:    }
+        1:  334:    catch (Error &) {
+        1:  334-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  334-block  1
+call    2 returned 1
+        -:  335:        assert(true);
+        1:  336:    }
+call    0 returned 1
+        1:  337:    service.adauga_lista_notificari(5);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  337-block  0
+        -:  338:    try {
+        1:  339:        service.adauga_lista_notificari(5);
+        1:  339-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  339-block  1
+    =====:  340:        assert(false);
+    $$$$$:  340-block  0
+call    0 never executed
+        -:  341:    }
+        1:  342:    catch (Error &) {
+        1:  342-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  342-block  1
+call    2 returned 1
+        -:  343:        assert(true);
+        1:  344:    }
+call    0 returned 1
+        1:  345:    assert(service.get_size_lista_notificari() == 1);
+        1:  345-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    $$$$$:  345-block  1
+call    2 never executed
+        1:  345-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  346:    service.goleste_lista_notificari();
+        1:  346-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  347:    assert(service.get_size_lista_notificari() == 0);
+        1:  347-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  347-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    $$$$$:  347-block  2
+call    5 never executed
+        1:  347-block  3
+        1:  348:}
+        1:  348-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:  348-block  1
+call    5 never executed
+    $$$$$:  348-block  2
+call    6 never executed
+    $$$$$:  348-block  3
+call    7 never executed
+    $$$$$:  348-block  4
+call    8 never executed
+    $$$$$:  348-block  5
+call    9 never executed
+        -:  349:
+function _ZN5Teste26test_generare_lista_randomEv called 1 returned 100% blocks executed 56%
+        1:  350:void Teste::test_generare_lista_random(){
+        1:  351:    Repository repo = Repository();
+        1:  351-block  0
+call    0 returned 1
+        1:  352:    ListaNotificare listaNotificare = ListaNotificare();
+call    0 returned 1
+        1:  353:    Service service = Service(repo, listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  354:
+        1:  355:    int apartament = 5;
+        1:  356:    int suprafata = 120;
+        1:  356-block  0
+        2:  357:    string nume = "Marcel";
+        1:  357-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  357-block  1
+        1:  358:    string tip = "duplex";
+        1:  358-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  358-block  1
+        1:  359:    service.adaugareLocatar(apartament, nume, suprafata, tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  360:
+        1:  361:    int ap1=10;
+        1:  362:    int sup1=150;
+        1:  362-block  0
+        2:  363:    string nume1="Mike";
+        1:  363-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  363-block  1
+        1:  364:    string tip1="da";
+        1:  364-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  364-block  1
+        1:  365:    service.adaugareLocatar(ap1,nume1,sup1,tip1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  366:
+        1:  367:    int ap2=15;
+        1:  368:    int sup2=200;
+        1:  368-block  0
+        2:  369:    string nume2="Abel";
+        1:  369-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  369-block  1
+        1:  370:    string tip2="nu";
+        1:  370-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  370-block  1
+        1:  371:    service.adaugareLocatar(ap2,nume2,sup2,tip2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  372:
+       1*:  373:    assert(service.get_random_apartamente(2)==0);
+        1:  373-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  373-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  373-block  2
+call    5 never executed
+        1:  373-block  3
+    $$$$$:  373-block  4
+        -:  374:
+        1:  375:    vector<Locatar> listaNotificari=service.extrage_Locatari();
+        1:  375-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  376:    assert(service.get_size_lista_notificari()==2);
+        1:  376-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  376-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  376-block  2
+call    5 never executed
+        1:  376-block  3
+        -:  377:
+       1*:  378:    assert(service.get_random_apartamente(5)==1);
+        1:  378-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  378-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  378-block  2
+call    5 never executed
+        1:  378-block  3
+    $$$$$:  378-block  4
+       1*:  379:    assert(service.get_size_lista_notificari()==3);
+        1:  379-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  379-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  379-block  2
+call    5 never executed
+        1:  379-block  3
+       1*:  380:    assert(service.get_size_lista_notificari()==3);
+        1:  380-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  380-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  380-block  2
+call    5 never executed
+        1:  380-block  3
+        -:  381:
+        1:  382:}
+        1:  382-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+    $$$$$:  382-block  1
+call   10 never executed
+    $$$$$:  382-block  2
+call   11 never executed
+    $$$$$:  382-block  3
+call   12 never executed
+    $$$$$:  382-block  4
+call   13 never executed
+    $$$$$:  382-block  5
+call   14 never executed
+    $$$$$:  382-block  6
+call   15 never executed
+    $$$$$:  382-block  7
+call   16 never executed
+    $$$$$:  382-block  8
+call   17 never executed
+    $$$$$:  382-block  9
+call   18 never executed
+    $$$$$:  382-block 10
+call   19 never executed
+function _ZN5Teste15test_export_CSVEv called 1 returned 100% blocks executed 56%
+        1:  383:void Teste::test_export_CSV(){
+        1:  383-block  0
+        1:  384:    string path=R"(E:\Folders\UBB An 1 sem 2\LAB 8 OOP\testCSV.txt)";
+        1:  384-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  384-block  1
+        1:  385:    Repository repo = Repository();
+call    0 returned 1
+        1:  386:    ListaNotificare listaNotificare = ListaNotificare();
+call    0 returned 1
+        1:  387:    Service service = Service(repo, listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  388:
+        1:  389:    int apartament = 5;
+        1:  390:    int suprafata = 120;
+        1:  390-block  0
+        2:  391:    string nume = "Marcel";
+        1:  391-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  391-block  1
+        1:  392:    string tip = "duplex";
+        1:  392-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  392-block  1
+        1:  393:    service.adaugareLocatar(apartament, nume, suprafata, tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  394:
+        1:  395:    int ap1=10;
+        1:  396:    int sup1=150;
+        1:  396-block  0
+        2:  397:    string nume1="Mike";
+        1:  397-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  397-block  1
+        1:  398:    string tip1="da";
+        1:  398-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  398-block  1
+        1:  399:    service.adaugareLocatar(ap1,nume1,sup1,tip1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  400:
+        1:  401:    int ap2=15;
+        1:  402:    int sup2=200;
+        1:  402-block  0
+        2:  403:    string nume2="Abel";
+        1:  403-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  403-block  1
+        1:  404:    string tip2="nu";
+        1:  404-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  404-block  1
+        1:  405:    service.adaugareLocatar(ap2,nume2,sup2,tip2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  406:
+       1*:  407:    assert(service.get_random_apartamente(2)==0);
+        1:  407-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  407-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  407-block  2
+call    5 never executed
+        1:  407-block  3
+    $$$$$:  407-block  4
+        -:  408:
+        1:  409:    vector<Locatar> listaNotificari=service.extrage_Locatari();
+        1:  409-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  410:    assert(service.get_size_lista_notificari()==2);
+        1:  410-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  410-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  410-block  2
+call    5 never executed
+        1:  410-block  3
+        -:  411:
+       1*:  412:    assert(service.get_random_apartamente(5)==1);
+        1:  412-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  412-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  412-block  2
+call    5 never executed
+        1:  412-block  3
+    $$$$$:  412-block  4
+       1*:  413:    assert(service.get_size_lista_notificari()==3);
+        1:  413-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  413-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  413-block  2
+call    5 never executed
+        1:  413-block  3
+       1*:  414:    assert(service.get_size_lista_notificari()==3);
+        1:  414-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  414-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  414-block  2
+call    5 never executed
+        1:  414-block  3
+        -:  415:
+        1:  416:    service.export_CSV(path);
+        1:  416-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  417:}
+        1:  417-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+    $$$$$:  417-block  1
+call   11 never executed
+    $$$$$:  417-block  2
+call   12 never executed
+    $$$$$:  417-block  3
+call   13 never executed
+    $$$$$:  417-block  4
+call   14 never executed
+    $$$$$:  417-block  5
+call   15 never executed
+    $$$$$:  417-block  6
+call   16 never executed
+    $$$$$:  417-block  7
+call   17 never executed
+    $$$$$:  417-block  8
+call   18 never executed
+    $$$$$:  417-block  9
+call   19 never executed
+    $$$$$:  417-block 10
+call   20 never executed
+    $$$$$:  417-block 11
+call   21 never executed
+        -:  418:
+function _ZN5Teste22test_extrage_frecventeEv called 1 returned 100% blocks executed 53%
+        1:  419:void Teste::test_extrage_frecvente(){
+        1:  420:    Repository repo = Repository();
+        1:  420-block  0
+call    0 returned 1
+        1:  421:    ListaNotificare listaNotificare = ListaNotificare();
+call    0 returned 1
+        1:  422:    Service service = Service(repo, listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  423:
+        1:  424:    int apartament = 5;
+        1:  425:    int suprafata = 120;
+        1:  425-block  0
+        2:  426:    string nume = "Marcel";
+        1:  426-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  426-block  1
+        1:  427:    string tip = "duplex";
+        1:  427-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  427-block  1
+        1:  428:    service.adaugareLocatar(apartament, nume, suprafata, tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  429:
+        1:  430:    int ap1=10;
+        1:  431:    int sup1=150;
+        1:  431-block  0
+        2:  432:    string nume1="Mike";
+        1:  432-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  432-block  1
+        1:  433:    string tip1="da";
+        1:  433-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  433-block  1
+        1:  434:    service.adaugareLocatar(ap1,nume1,sup1,tip1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  435:
+        1:  436:    int ap2=15;
+        1:  437:    int sup2=200;
+        1:  437-block  0
+        2:  438:    string nume2="Abel";
+        1:  438-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  438-block  1
+        1:  439:    string tip2="da";
+        1:  439-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  439-block  1
+        1:  440:    service.adaugareLocatar(ap2,nume2,sup2,tip2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  441:
+        1:  442:    unordered_map<string,int> frecv=service.extrage_frecvente();
+        1:  442-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       2*:  443:    assert(frecv["da"]==2);
+        1:  443-block  0
+        1:  443-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  443-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  443-block  3
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  443-block  4
+call    8 never executed
+        1:  443-block  5
+        1:  443-block  6
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  443-block  7
+call   11 returned 1
+        1:  443-block  8
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+    $$$$$:  443-block  9
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    $$$$$:  443-block 10
+call   16 never executed
+    $$$$$:  443-block 11
+    $$$$$:  443-block 12
+branch 17 never executed (fallthrough)
+branch 18 never executed
+    $$$$$:  443-block 13
+       2*:  444:    assert(frecv["duplex"]==1);
+        1:  444-block  0
+        1:  444-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  444-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  444-block  3
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  444-block  4
+call    8 never executed
+        1:  444-block  5
+        1:  444-block  6
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  444-block  7
+call   11 returned 1
+        1:  444-block  8
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+    $$$$$:  444-block  9
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    $$$$$:  444-block 10
+call   16 never executed
+    $$$$$:  444-block 11
+    $$$$$:  444-block 12
+branch 17 never executed (fallthrough)
+branch 18 never executed
+    $$$$$:  444-block 13
+        1:  445:}
+        1:  445-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+    $$$$$:  445-block  1
+call   10 never executed
+    $$$$$:  445-block  2
+call   11 never executed
+    $$$$$:  445-block  3
+call   12 never executed
+    $$$$$:  445-block  4
+call   13 never executed
+    $$$$$:  445-block  5
+call   14 never executed
+    $$$$$:  445-block  6
+call   15 never executed
+    $$$$$:  445-block  7
+call   16 never executed
+    $$$$$:  445-block  8
+call   17 never executed
+    $$$$$:  445-block  9
+call   18 never executed
+    $$$$$:  445-block 10
+call   19 never executed
+        -:  446:
+function _ZN5Teste9test_UndoEv called 1 returned 100% blocks executed 56%
+        1:  447:void Teste::test_Undo() {
+        1:  448:    Repository repo = Repository();
+        1:  448-block  0
+call    0 returned 1
+        1:  449:    ListaNotificare listaNotificare = ListaNotificare();
+call    0 returned 1
+        1:  450:    Service service = Service(repo, listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  451:
+        1:  452:    int apartament = 5;
+        1:  453:    int suprafata = 120;
+        1:  453-block  0
+        2:  454:    string nume = "Marcel";
+        1:  454-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  454-block  1
+        1:  455:    string tip = "duplex";
+        1:  455-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  455-block  1
+        -:  456:    try {
+        1:  457:        service.doUndo();
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:  458:        assert(false);
+    %%%%%:  458-block  0
+call    0 never executed
+        -:  459:    }
+        1:  460:    catch (Error&){
+        1:  460-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  460-block  1
+call    2 returned 1
+        -:  461:        assert(true);
+        1:  462:    }
+call    0 returned 1
+        -:  463:
+        1:  464:    service.adaugareLocatar(apartament, nume, suprafata, tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  465:
+        1:  466:    service.doUndo();
+        1:  466-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  467:
+        1:  468:    assert(service.extrage_Locatari().empty());
+        1:  468-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  468-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  468-block  2
+call    6 never executed
+        1:  468-block  3
+        1:  468-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  468-block  5
+call    9 returned 1
+    $$$$$:  468-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:  468-block  7
+call   12 never executed
+    $$$$$:  468-block  8
+        -:  469:
+        1:  470:    service.adaugareLocatar(apartament, nume, suprafata, tip);
+        1:  470-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  471:    service.stergereLocatar(5);
+        1:  471-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  471-block  1
+        1:  472:    service.doUndo();
+        1:  472-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  473:
+        1:  474:    assert(service.extrage_Locatari().size()==1);
+        1:  474-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  474-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  474-block  2
+call    6 never executed
+        1:  474-block  3
+        1:  474-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  474-block  5
+call    9 returned 1
+        1:  474-block  6
+    $$$$$:  474-block  7
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:  474-block  8
+call   12 never executed
+    $$$$$:  474-block  9
+        -:  475:
+        1:  476:    string nume2="Ion";
+        1:  476-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  476-block  1
+        1:  477:    service.actualizareLocatar(5,nume2,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  478:    assert(service.extrage_Locatari()[0].get_proprietar()=="Ion");
+        1:  478-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  478-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  478-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  478-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:  478-block  4
+call   12 never executed
+        1:  478-block  5
+        1:  478-block  6
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:  478-block  7
+call   15 returned 1
+        1:  478-block  8
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:  478-block  9
+call   18 returned 1
+    $$$$$:  478-block 10
+branch 19 never executed (fallthrough)
+branch 20 never executed
+    $$$$$:  478-block 11
+call   21 never executed
+    $$$$$:  478-block 12
+    $$$$$:  478-block 13
+branch 22 never executed (fallthrough)
+branch 23 never executed
+    $$$$$:  478-block 14
+call   24 never executed
+    $$$$$:  478-block 15
+        -:  479:
+        1:  480:    service.doUndo();
+        1:  480-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  481:
+        1:  482:    assert(service.extrage_Locatari()[0].get_proprietar()=="Marcel");
+        1:  482-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  482-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  482-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  482-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:  482-block  4
+call   12 never executed
+        1:  482-block  5
+        1:  482-block  6
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:  482-block  7
+call   15 returned 1
+        1:  482-block  8
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:  482-block  9
+call   18 returned 1
+    $$$$$:  482-block 10
+branch 19 never executed (fallthrough)
+branch 20 never executed
+    $$$$$:  482-block 11
+call   21 never executed
+    $$$$$:  482-block 12
+    $$$$$:  482-block 13
+branch 22 never executed (fallthrough)
+branch 23 never executed
+    $$$$$:  482-block 14
+call   24 never executed
+    $$$$$:  482-block 15
+        1:  483:}
+        1:  483-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  483-block  1
+call    6 never executed
+    $$$$$:  483-block  2
+call    7 never executed
+    $$$$$:  483-block  3
+call    8 never executed
+    $$$$$:  483-block  4
+call    9 never executed
+    $$$$$:  483-block  5
+call   10 never executed
+    $$$$$:  483-block  6
+call   11 never executed
+        -:  484:
+function _ZN5Teste25test_export_ListaLocatariEv called 1 returned 100% blocks executed 56%
+        1:  485:void Teste::test_export_ListaLocatari(){
+        1:  485-block  0
+        1:  486:    FileRepository repo = FileRepository(R"(E:\Folders\UBB An 1 sem 2\LAB 8 OOP\testexportListaLocatari.txt)");
+        1:  486-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  486-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  486-block  2
+call    6 returned 1
+    $$$$$:  486-block  3
+call    7 never executed
+    $$$$$:  486-block  4
+    $$$$$:  486-block  5
+        1:  487:    repo.clearFile();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  488:    ListaNotificare listaNotificare = ListaNotificare();
+        1:  488-block  0
+call    0 returned 1
+        1:  489:    Service service = Service(repo, listaNotificare);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  490:
+        1:  491:    int apartament = 5;
+        1:  492:    int suprafata = 120;
+        1:  492-block  0
+        2:  493:    string nume = "Marcel";
+        1:  493-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  493-block  1
+        1:  494:    string tip = "duplex";
+        1:  494-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  494-block  1
+        1:  495:    service.adaugareLocatar(apartament, nume, suprafata, tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  496:    service.write_ListaLocatari_to_file();
+        1:  496-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  497:    FileRepository repo2 = repo;
+        1:  497-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  498:
+        1:  499:}
+        1:  499-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  499-block  1
+call    6 never executed
+    $$$$$:  499-block  2
+call    7 never executed
+    $$$$$:  499-block  3
+call    8 never executed
+    $$$$$:  499-block  4
+call    9 never executed
+    $$$$$:  499-block  5
+call   10 never executed
+        -:  500:
+function _ZN5Teste52test_copiere_afisare_stergere_modificare_filelocatarEv called 1 returned 100% blocks executed 55%
+        1:  501:void Teste::test_copiere_afisare_stergere_modificare_filelocatar(){
+        1:  502:    int apartament = 5;
+        1:  503:    int suprafata = 120;
+        1:  503-block  0
+        2:  504:    string nume = "Marcel";
+        1:  504-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  504-block  1
+        1:  505:    string tip = "duplex";
+        1:  505-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  505-block  1
+        1:  506:    Locatar loc = Locatar(apartament,nume,suprafata,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  507:    FileRepository repo = FileRepository(
+        1:  508:            R"(E:\Folders\UBB An 1 sem 2\LAB 8 OOP\copiereAfisareLocatarTest.txt)");
+        1:  508-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  508-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  508-block  2
+call    6 returned 1
+    $$$$$:  508-block  3
+call    7 never executed
+    $$$$$:  508-block  4
+    $$$$$:  508-block  5
+        1:  509:    repo.clearFile();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  510:    repo.adaugareLocatar(loc);
+        1:  510-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  511:    try{
+       1*:  512:        repo.copiaza_locatar(22);
+        1:  512-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    %%%%%:  512-block  1
+call    3 never executed
+        1:  512-block  2
+        1:  512-block  3
+    #####:  513:        assert(false);
+call    0 never executed
+        -:  514:    }
+        1:  515:    catch (Error&){
+        1:  515-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  515-block  1
+call    2 returned 1
+        -:  516:        assert(true);
+        1:  517:    }
+call    0 returned 1
+        1:  518:    repo.write_ListaLocatari_to_file();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  519:    try {
+        1:  520:        repo.extrageApartament(28);
+        1:  520-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  520-block  1
+    =====:  521:        assert(false);
+    $$$$$:  521-block  0
+call    0 never executed
+        -:  522:    }
+        1:  523:    catch(Error&){
+        1:  523-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  523-block  1
+call    2 returned 1
+        -:  524:        assert(true);
+        1:  525:    }
+call    0 returned 1
+        1:  526:    string nume2="Mirel";
+        1:  526-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  526-block  1
+        1:  527:    Locatar loc2=Locatar(9,nume2,200,tip);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  528:    repo.adaugareLocatar(loc2);
+        1:  528-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  529:    repo.actualizareLocatar(9,nume2,200,tip);
+        1:  529-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  529-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  529-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  529-block  3
+call    9 returned 1
+call   10 returned 1
+    $$$$$:  529-block  4
+call   11 never executed
+    $$$$$:  529-block  5
+    $$$$$:  529-block  6
+call   12 never executed
+    $$$$$:  529-block  7
+        1:  530:    assert(repo.extrage_Locatari()[1].get_proprietar()=="Mirel");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  530-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  530-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  530-block  2
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:  530-block  3
+call   12 never executed
+        1:  530-block  4
+        1:  530-block  5
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+        1:  530-block  6
+call   15 returned 1
+        1:  530-block  7
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:  530-block  8
+call   18 returned 1
+    $$$$$:  530-block  9
+branch 19 never executed (fallthrough)
+branch 20 never executed
+    $$$$$:  530-block 10
+call   21 never executed
+    $$$$$:  530-block 11
+    $$$$$:  530-block 12
+branch 22 never executed (fallthrough)
+branch 23 never executed
+    $$$$$:  530-block 13
+call   24 never executed
+    $$$$$:  530-block 14
+        1:  531:    repo.stergereLocatar(5);
+        1:  531-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  531-block  1
+        1:  532:    repo.stergereLocatar(9);
+        1:  532-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  532-block  1
+        1:  533:    assert(repo.extrage_Locatari().empty());
+        1:  533-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  533-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  533-block  2
+call    6 never executed
+        1:  533-block  3
+        1:  533-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:  533-block  5
+call    9 returned 1
+    $$$$$:  533-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:  533-block  7
+call   12 never executed
+    $$$$$:  533-block  8
+        1:  534:}
+        1:  534-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  534-block  1
+call    6 never executed
+    $$$$$:  534-block  2
+call    7 never executed
+    $$$$$:  534-block  3
+call    8 never executed
+    $$$$$:  534-block  4
+call    9 never executed
+    $$$$$:  534-block  5
+call   10 never executed
+    $$$$$:  534-block  6
+call   11 never executed

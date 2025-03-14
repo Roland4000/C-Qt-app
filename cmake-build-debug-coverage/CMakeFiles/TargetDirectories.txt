@@ -1,0 +1,5 @@
+E:/Folders/UBB An 1 sem 2/QtC++app/cmake-build-debug-coverage/CMakeFiles/Qtie.dir
+E:/Folders/UBB An 1 sem 2/QtC++app/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+E:/Folders/UBB An 1 sem 2/QtC++app/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
+E:/Folders/UBB An 1 sem 2/QtC++app/cmake-build-debug-coverage/CMakeFiles/Qtie_autogen_timestamp_deps.dir
+E:/Folders/UBB An 1 sem 2/QtC++app/cmake-build-debug-coverage/CMakeFiles/Qtie_autogen.dir

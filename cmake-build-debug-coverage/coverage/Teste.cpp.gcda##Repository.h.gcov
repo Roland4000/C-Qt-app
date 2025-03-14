@@ -1,0 +1,209 @@
+        -:    0:Source:E:/Folders/UBB An 1 sem 2/Qtie/Repository.h
+        -:    0:Graph:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Teste.cpp.gcno
+        -:    0:Data:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Legion user on 03.05.2024.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef QTIE_REPOSITORY_H
+        -:    6:#define QTIE_REPOSITORY_H
+        -:    7:
+        -:    8:#include "Domain.h"
+        -:    9:#include <vector>
+        -:   10:#include <utility>
+        -:   11:#include <algorithm>
+        -:   12:#include <fstream>
+        -:   13:#include "Error.h"
+        -:   14:using namespace std;
+        -:   15:
+        -:   16:class AbstractRepository{
+        -:   17:public:
+        -:   18:    virtual void adaugareLocatar(const Locatar &Locatar) = 0;
+        -:   19:    virtual void stergereLocatar(const int& apartament) = 0;
+        -:   20:    virtual void actualizareLocatar(int apartament, string proprietar, int suprafata, string tip) = 0;
+        -:   21:    virtual bool cautareApartament(const int& apartament) = 0;
+        -:   22:    virtual vector<Locatar> extrage_Locatari() = 0;
+        -:   23:    virtual Locatar& extrageApartament(const int& nr_apartament) = 0;
+        -:   24:    virtual Locatar copiaza_locatar(const int& nr_apartament) = 0;
+        -:   25:    virtual void write_ListaLocatari_to_file() = 0;
+        -:   26:
+        -:   27:};
+        -:   28:
+        -:   29:class Repository : public AbstractRepository {
+        -:   30:public:
+        -:   31:    /*
+        -:   32:     * Functia adauga un Locatar in ListaLocatari.
+        -:   33:     * Preconditii: Locatar = un Locatar
+        -:   34:     * Postconditii: adevarat
+        -:   35:     */
+        -:   36:    void adaugareLocatar(const Locatar &Locatar) override;
+        -:   37:    /*
+        -:   38:     * Functia sterge un Locatar din ListaLocatari.
+        -:   39:     * Preconditii: apartament = int > 0
+        -:   40:     * Postconditii: adevarat
+        -:   41:     */
+        -:   42:    void stergereLocatar(const int& apartament) override;
+        -:   43:    /*
+        -:   44:     * Functia actualizeaza Locatarul cu id-ul id si ii modifica pretul si cantitatea.
+        -:   45:     * Pentru pret = -1, nu se modifica pretul, pentru cantitate =-1, nu se modifica cantitatea.
+        -:   46:     * Preconditii:  pret = double >0 sau =-1, cantitate = int >0 sau =-1
+        -:   47:     * Postconditii: adevarat
+        -:   48:     */
+        -:   49:    void actualizareLocatar(int apartament, string proprietar, int suprafata, string tip) override;
+        -:   50:    /*
+        -:   51:     * Functia ne returneaza adevarat sau fals daca exista un Locatar
+        -:   52:     * cu apartamentul apartament in ListaLocatari sau nu.
+        -:   53:     * Preconditii: apartament = int > 0
+        -:   54:     * Postconditii: adevarat sau fals
+        -:   55:     */
+        -:   56:    bool cautareApartament(const int& apartament) override;
+        -:   57:    /*
+        -:   58:     * Functia returneaza lista de Locatari din repo.
+        -:   59:     * Preconditii: adevarat
+        -:   60:     * Postconditii: vector<Locatar>
+        -:   61:     */
+        -:   62:    vector<Locatar> extrage_Locatari() override;
+        -:   63:    /*
+        -:   64:     * Functia returneaza o referinta la apartamentul cu nr_apartament.
+        -:   65:     * Preconditii: nr_apartament: int > 0
+        -:   66:     * Postconditii: Locatar&
+        -:   67:     */
+        -:   68:    Locatar &extrageApartament(const int& nr_apartament) override;
+        -:   69:    /*
+        -:   70:     * Functia returneaza numarul de apartamente inregistrate de tipul tip.
+        -:   71:     * Preconditii: tip = string
+        -:   72:     *
+        -:   73:     */
+        -:   74:    void write_ListaLocatari_to_file() override{};
+        -:   75:    /*
+        -:   76:  * Functia intoarce o copie a locatarului cu nr_apartament din repo.
+        -:   77:  * Preconditii: nr_apartament = int > 0
+        -:   78:  * Postconditii: Locatar
+        -:   79:  * Arunca exceptie daca nu exista un locatar cu nr_apartament dat ca parametru.
+        -:   80:  */
+        -:   81:    Locatar copiaza_locatar(const int& nr_apartament) override;
+        -:   82:
+        -:   83:    Repository& operator=(Repository *obj){
+        -:   84:        if (this!=obj){
+        -:   85:            this->ListaLocatari.clear();
+        -:   86:            for (const auto& locatar : obj->ListaLocatari)
+        -:   87:                this->ListaLocatari.push_back(locatar);
+        -:   88:        }
+        -:   89:        return *this;
+        -:   90:    }
+        -:   91:
+        -:   92:    //Constructor
+function _ZN10RepositoryC1Ev called 15 returned 100% blocks executed 100%
+       15:   93:    Repository() = default;
+       15:   93-block  0
+call    0 returned 15
+call    1 returned 15
+        -:   94:    //Copy
+        -:   95:    Repository(Repository& obj){
+        -:   96:        *this=obj;
+        -:   97:    }
+        -:   98:    //Destructor
+      15*:   99:    ~Repository()=default;
+------------------
+_ZN10RepositoryD1Ev:
+function _ZN10RepositoryD1Ev called 15 returned 100% blocks executed 100%
+       15:   99:    ~Repository()=default;
+       15:   99-block  0
+call    0 returned 15
+------------------
+_ZN10RepositoryD2Ev:
+function _ZN10RepositoryD2Ev called 0 returned 0% blocks executed 0%
+    #####:   99:    ~Repository()=default;
+    %%%%%:   99-block  0
+call    0 never executed
+------------------
+        -:  100:protected:
+        -:  101:    vector<Locatar> ListaLocatari;
+        -:  102:
+        -:  103:};
+        -:  104:
+        -:  105:class FileRepository : public Repository {
+        -:  106:private :
+        -:  107:    string path;
+        -:  108:public:
+        -:  109:    /*
+        -:  110:    * Clasa cere un string care sa reprezinte calea
+        -:  111:    * fisierului unde se vor realiza salvarile.
+        -:  112:    * Preconditii: path = string
+        -:  113:    * Postconditii: adevarat
+        -:  114:    */
+        -:  115:    explicit FileRepository(const string& path);
+        -:  116:    /*
+        -:  117:     * Functia salveaza ListaLocatari in format CSV in fisierul cu pathul dat in
+        -:  118:     * constructor.
+        -:  119:     * Preconditii: adevarat
+        -:  120:     * Postconditii: adevarat
+        -:  121:     */
+        -:  122:    void write_ListaLocatari_to_file() override;
+        -:  123:    /*
+        -:  124:     * Copy constructor.
+        -:  125:     */
+        -:  126:    FileRepository(const FileRepository& repo);
+        -:  127:    /*
+        -:  128:     * Destructor.
+        -:  129:     */
+function _ZN14FileRepositoryD1Ev called 3 returned 100% blocks executed 100%
+        3:  130:    ~FileRepository()=default;
+        3:  130-block  0
+call    0 returned 3
+call    1 returned 3
+        -:  131:    /*
+        -:  132:     * Default constructor.
+        -:  133:     */
+        -:  134:    FileRepository()=default;
+        -:  135:    /*
+        -:  136:     * Functia adauga un locatar in ListaLocatari si
+        -:  137:     * actualizeaza lista in fisier.
+        -:  138:     * Preconditii: locatar = Locatar
+        -:  139:     * Postconditii: adevarat
+        -:  140:     */
+        -:  141:    void adaugareLocatar(const Locatar& locatar) override;
+        -:  142:    /*
+        -:  143:   * Functia sterge un Locatar din ListaLocatari si actualizeaza datele din fisier.
+        -:  144:   * Preconditii: apartament = int > 0
+        -:  145:   * Postconditii: adevarat
+        -:  146:   */
+        -:  147:    void stergereLocatar(const int& apartament) override;
+        -:  148:    /*
+        -:  149:     *  Functia schimba datele locatarului cu apartamentul dat ca
+        -:  150:     *  parametru in celelalte date date prin parametrii.
+        -:  151:     *  Preconditii: apartament = int > 0, suprafata = int > 0
+        -:  152:     *  Postconditii: adevarat
+        -:  153:     */
+        -:  154:    void actualizareLocatar(int apartament, string proprietar, int suprafata, string tip) override;
+        -:  155:    /*
+        -:  156:    *   Functia goleste fisierul din path.
+        -:  157:    */
+        -:  158:    void clearFile();
+        -:  159:private:
+        -:  160:    /*
+        -:  161:     *  Functia scrie in fisierul dat prin path datele din
+        -:  162:     *  ListaLocatari.
+        -:  163:     */
+        -:  164:    void writeToFile();
+        -:  165:    /*
+        -:  166:     *  Functia citeste datele din fisierul dat prin path
+        -:  167:     *  si le memoreaza in ListaLocatari.
+        -:  168:     */
+        -:  169:    void readFromFile();
+        -:  170:
+        -:  171:    FileRepository& operator=(FileRepository *obj){
+        -:  172:        if (this!=obj){
+        -:  173:            this->ListaLocatari.clear();
+        -:  174:            for (const auto& locatar : obj->extrage_Locatari())
+        -:  175:                this->ListaLocatari.push_back(locatar);
+        -:  176:            this->path=obj->path;
+        -:  177:        }
+        -:  178:        return *this;
+        -:  179:    }
+        -:  180:
+        -:  181:};
+        -:  182:
+        -:  183:
+        -:  184:#endif //QTIE_REPOSITORY_H

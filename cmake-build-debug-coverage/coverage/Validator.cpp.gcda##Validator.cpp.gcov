@@ -1,0 +1,73 @@
+        -:    0:Source:E:/Folders/UBB An 1 sem 2/Qtie/Validator.cpp
+        -:    0:Graph:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Validator.cpp.gcno
+        -:    0:Data:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Validator.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Validator.h"
+        -:    2:
+function _ZN9Validator16valideazaLocatarEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS7_ called 28 returned 96% blocks executed 89%
+       28:    3:bool Validator::valideazaLocatar(const int apartament, const string &proprietar, const int suprafata,const string &tip) {
+       28:    4:    string erori;
+       28:    4-block  0
+call    0 returned 28
+       28:    5:    if (apartament<=0)
+branch  0 taken 1 (fallthrough)
+branch  1 taken 27
+        1:    6:        erori+="Apartament <=0\n";
+        1:    6-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       28:    7:    if (tip.empty())
+       28:    7-block  0
+call    0 returned 28
+branch  1 taken 1 (fallthrough)
+branch  2 taken 27
+        1:    8:        erori+="Tip vid!\n";
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       28:    9:    if (proprietar.empty())
+       28:    9-block  0
+call    0 returned 28
+branch  1 taken 1 (fallthrough)
+branch  2 taken 27
+        1:   10:        erori+="Proprietar vid!\n";
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   11:    if (suprafata<=0)
+       28:   11-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 27
+        1:   12:        erori+="Suprafata <=0!\n";
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       28:   13:    if (erori.empty())
+       28:   13-block  0
+call    0 returned 28
+branch  1 taken 27 (fallthrough)
+branch  2 taken 1
+       27:   14:        return true;
+       27:   14-block  0
+        1:   15:    throw Error(erori);
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   15-block  1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   15-block  2
+    $$$$$:   15-block  3
+call    7 never executed
+       28:   16:}
+       27:   16-block  0
+call    0 returned 27
+        1:   16-block  1
+call    1 returned 1

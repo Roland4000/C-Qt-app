@@ -1,0 +1,10 @@
+        -:    0:Source:E:/Folders/UBB An 1 sem 2/Qtie/Error.cpp
+        -:    0:Graph:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Error.cpp.gcno
+        -:    0:Data:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Error.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Error.h"
+function _ZNK5Error10getMessageB5cxx11Ev called 2 returned 100% blocks executed 100%
+        2:    2:const string& Error::getMessage() const{
+        2:    3:    return message;
+        2:    3-block  0
+        -:    4:}

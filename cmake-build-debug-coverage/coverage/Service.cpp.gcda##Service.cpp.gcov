@@ -1,0 +1,639 @@
+        -:    0:Source:E:/Folders/UBB An 1 sem 2/Qtie/Service.cpp
+        -:    0:Graph:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Service.cpp.gcno
+        -:    0:Data:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Service.h"
+        -:    2:
+function _ZN7ServiceC2ER18AbstractRepositoryR15ListaNotificare called 13 returned 100% blocks executed 55%
+       13:    3:Service::Service(AbstractRepository& repo, ListaNotificare &listaNotificare) : repo(repo){
+       13:    3-block  0
+call    0 returned 13
+call    1 returned 13
+call    2 returned 13
+       13:    4:    this->listaNotificare=listaNotificare;
+call    0 returned 13
+branch  1 taken 13 (fallthrough)
+branch  2 taken 0 (throw)
+       13:    5:}
+       13:    5-block  0
+    $$$$$:    5-block  1
+call    0 never executed
+    $$$$$:    5-block  2
+call    1 never executed
+    $$$$$:    5-block  3
+call    2 never executed
+        -:    6:
+function _ZN7Service15adaugareLocatarEiRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS6_ called 26 returned 96% blocks executed 66%
+       26:    7:void Service::adaugareLocatar(const int apartament, string &proprietar, const int suprafata, string &tip) {
+       26:    8:    if (Validator::valideazaLocatar(apartament,proprietar,suprafata,tip)) {
+       26:    8-block  0
+call    0 returned 26
+branch  1 taken 26 (fallthrough)
+branch  2 taken 0
+       26:    9:        if (!repo.cautareApartament(apartament)) {
+       26:    9-block  0
+call    0 returned 26
+branch  1 taken 25 (fallthrough)
+branch  2 taken 1
+       25:   10:            Locatar locatar = Locatar(apartament,proprietar,suprafata,tip);
+       25:   10-block  0
+call    0 returned 25
+branch  1 taken 25 (fallthrough)
+branch  2 taken 0 (throw)
+       25:   11:            frecventa_tip[tip]++;
+       25:   11-block  0
+call    0 returned 25
+branch  1 taken 25 (fallthrough)
+branch  2 taken 0 (throw)
+       25:   12:            repo.adaugareLocatar(locatar);
+       25:   12-block  0
+call    0 returned 25
+branch  1 taken 25 (fallthrough)
+branch  2 taken 0 (throw)
+       25:   13:            UndoActions.push_back(new UndoAdauga (repo, locatar));
+       25:   13-block  0
+call    0 returned 25
+branch  1 taken 25 (fallthrough)
+branch  2 taken 0 (throw)
+       25:   13-block  1
+call    3 returned 25
+branch  4 taken 25 (fallthrough)
+branch  5 taken 0 (throw)
+       25:   13-block  2
+call    6 returned 25
+branch  7 taken 25 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   13-block  3
+branch  9 never executed (fallthrough)
+branch 10 never executed
+    $$$$$:   13-block  4
+call   11 never executed
+    $$$$$:   13-block  5
+       25:   14:        }
+       25:   14-block  0
+call    0 returned 25
+    $$$$$:   14-block  1
+call    1 never executed
+        -:   15:        else {
+        1:   16:            string ex = "Apartament deja existent!\n";
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   16-block  1
+        1:   17:            throw Error(ex);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   17-block  0
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   17-block  1
+    $$$$$:   17-block  2
+call    7 never executed
+        1:   18:        }
+        1:   18-block  0
+call    0 returned 1
+        -:   19:    }
+       25:   20:}
+       25:   20-block  0
+        -:   21:
+function _ZN7Service15stergereLocatarERKi called 3 returned 67% blocks executed 63%
+        3:   22:void Service::stergereLocatar(const int& apartament) {
+        3:   23:    if (!repo.cautareApartament(apartament)){
+        3:   23-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:   24:        string ex="Apartament inexistent!\n";
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   24-block  1
+        1:   25:        throw Error(ex);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   25-block  0
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   25-block  1
+    $$$$$:   25-block  2
+call    7 never executed
+        1:   26:    }
+        1:   26-block  0
+call    0 returned 1
+        2:   27:    frecventa_tip[repo.extrageApartament(apartament).get_tip()]--;
+        2:   27-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   27-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   27-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   27-block  3
+call    9 returned 2
+    $$$$$:   27-block  4
+call   10 never executed
+    $$$$$:   27-block  5
+call   11 never executed
+        2:   28:    UndoActions.push_back(new UndoSterge(repo, repo.copiaza_locatar(apartament)));
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   28-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   28-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   28-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   28-block  3
+call   12 returned 2
+    $$$$$:   28-block  4
+call   13 never executed
+    $$$$$:   28-block  5
+    $$$$$:   28-block  6
+branch 14 never executed (fallthrough)
+branch 15 never executed
+    $$$$$:   28-block  7
+call   16 never executed
+        2:   29:    repo.stergereLocatar(apartament);
+call    0 returned 2
+        2:   30:}
+        -:   31:
+function _ZN7Service18actualizareLocatarEiRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS6_ called 3 returned 67% blocks executed 62%
+        3:   32:void Service::actualizareLocatar(const int apartament, string &proprietar, const int suprafata, string &tip) {
+        3:   33:    if (!repo.cautareApartament(apartament)){
+        3:   33-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:   34:        string ex{"Apartament inexistent!\n"};
+        1:   34-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   34-block  1
+        1:   35:        throw Error(ex);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   35-block  0
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+    $$$$$:   35-block  1
+    $$$$$:   35-block  2
+call    7 never executed
+        1:   36:    }
+        1:   36-block  0
+call    0 returned 1
+        2:   37:    frecventa_tip[tip]++;
+        2:   37-block  0
+call    0 returned 2
+        2:   38:    frecventa_tip[repo.extrageApartament(apartament).get_tip()]--;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   38-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   38-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   38-block  2
+call    9 returned 2
+    $$$$$:   38-block  3
+call   10 never executed
+    $$$$$:   38-block  4
+call   11 never executed
+        2:   39:    UndoActions.push_back(new UndoModificare(repo,repo.extrageApartament(apartament)));
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   39-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   39-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   39-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+    $$$$$:   39-block  3
+branch 12 never executed (fallthrough)
+branch 13 never executed
+    $$$$$:   39-block  4
+call   14 never executed
+    $$$$$:   39-block  5
+call   15 never executed
+        2:   40:    repo.actualizareLocatar(apartament,proprietar,suprafata, tip);
+        2:   40-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   40-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   40-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   40-block  3
+call    9 returned 2
+call   10 returned 2
+    $$$$$:   40-block  4
+call   11 never executed
+    $$$$$:   40-block  5
+    $$$$$:   40-block  6
+call   12 never executed
+        2:   41:}
+        -:   42:
+function _ZN7Service16extrage_LocatariEv called 9 returned 100% blocks executed 100%
+        9:   43:vector<Locatar> Service::extrage_Locatari(){
+        9:   44:    return repo.extrage_Locatari();
+        9:   44-block  0
+call    0 returned 9
+        -:   45:}
+        -:   46:
+function _ZN7Service30filtreaza_locatari_tip_serviceERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 73%
+        1:   47:vector<Locatar> Service::filtreaza_locatari_tip_service(string &tip){
+        1:   48:    vector<Locatar> lista_extrasa=repo.extrage_Locatari();
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49:    vector<Locatar> lista_filtrata;
+        1:   49-block  0
+call    0 returned 1
+function _ZZN7Service30filtreaza_locatari_tip_serviceERNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlR7LocatarE_clES8_ called 1 returned 100% blocks executed 100%
+        1:   50:    copy_if(lista_extrasa.begin(), lista_extrasa.end(), back_inserter(lista_filtrata),  [&tip](Locatar &locatar)->bool{
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  0
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   51:        return locatar.get_tip()==tip;});
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  1
+call    3 returned 1
+call    4 returned 1
+        1:   51-block  2
+        2:   52:    return lista_filtrata;
+        1:   52-block  0
+        1:   52-block  1
+        1:   53:}
+        1:   53-block  0
+call    0 returned 1
+    $$$$$:   53-block  1
+call    1 never executed
+    $$$$$:   53-block  2
+call    2 never executed
+        -:   54:
+function _ZN7Service30filtreaza_locatari_sup_serviceERKi called 1 returned 100% blocks executed 73%
+        1:   55:vector<Locatar> Service::filtreaza_locatari_sup_service(const int& sup){
+        1:   56:    vector<Locatar> lista_extrasa=repo.extrage_Locatari();
+        1:   56-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57:    vector<Locatar> lista_filtrata;
+        1:   57-block  0
+call    0 returned 1
+function _ZZN7Service30filtreaza_locatari_sup_serviceERKiENKUlR7LocatarE_clES3_ called 1 returned 100% blocks executed 100%
+        1:   58:    copy_if(lista_extrasa.begin(), lista_extrasa.end(), back_inserter(lista_filtrata),  [&sup](Locatar &locatar)->bool{
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   58-block  0
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   59:        return locatar.get_suprafata()<=sup;});
+        1:   59-block  0
+call    0 returned 1
+        2:   60:    return lista_filtrata;
+        1:   60-block  0
+        1:   60-block  1
+        1:   61:}
+        1:   61-block  0
+call    0 returned 1
+    $$$$$:   61-block  1
+call    1 never executed
+    $$$$$:   61-block  2
+call    2 never executed
+        -:   62:
+function _ZN7Service30sorteaza_locatari_nume_serviceEv called 1 returned 100% blocks executed 88%
+        1:   63:vector<Locatar> Service::sorteaza_locatari_nume_service(){
+        1:   64:    vector<Locatar> lista_sortata=repo.extrage_Locatari();
+        1:   64-block  0
+call    0 returned 1
+        1:   65:    sort(lista_sortata.begin(),lista_sortata.end(),
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN7Service30sorteaza_locatari_nume_serviceEvENKUlRK7LocatarS2_E_clES2_S2_ called 1 returned 100% blocks executed 73%
+        1:   66:         [](const Locatar &a, const Locatar&b)->bool{return a.get_proprietar()<b.get_proprietar();});
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   66-block  2
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+        1:   66-block  3
+    $$$$$:   66-block  4
+    $$$$$:   66-block  5
+call    9 never executed
+        1:   67:    return lista_sortata;}
+        1:   67-block  0
+        1:   67-block  1
+    $$$$$:   67-block  2
+call    0 never executed
+        -:   68:
+function _ZN7Service35sorteaza_locatari_suprafata_serviceEv called 1 returned 100% blocks executed 88%
+        1:   69:vector<Locatar> Service::sorteaza_locatari_suprafata_service(){
+        1:   70:    vector<Locatar> lista_sortata=repo.extrage_Locatari();
+        1:   70-block  0
+call    0 returned 1
+        1:   71:    sort(lista_sortata.begin(),lista_sortata.end(),
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN7Service35sorteaza_locatari_suprafata_serviceEvENKUlRK7LocatarS2_E_clES2_S2_ called 1 returned 100% blocks executed 100%
+        1:   72:         [](const Locatar &a, const Locatar&b)->bool{return a.get_suprafata()<b.get_suprafata();});
+        1:   72-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   73:    return lista_sortata;}
+        1:   73-block  0
+        1:   73-block  1
+    $$$$$:   73-block  2
+call    0 never executed
+        -:   74:
+function _ZN7Service39sorteaza_locatari_tip_suprafata_serviceEv called 1 returned 100% blocks executed 88%
+        1:   75:vector<Locatar> Service::sorteaza_locatari_tip_suprafata_service(){
+        1:   76:    vector<Locatar> lista_sortata=repo.extrage_Locatari();
+        1:   76-block  0
+call    0 returned 1
+        1:   77:    sort(lista_sortata.begin(),lista_sortata.end(),
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN7Service39sorteaza_locatari_tip_suprafata_serviceEvENKUlRK7LocatarS2_E_clES2_S2_ called 2 returned 100% blocks executed 71%
+        2:   78:         [](const Locatar &a, const Locatar&b)->bool{if (a.get_tip()==b.get_tip()){return a.get_suprafata()<b.get_suprafata();} return a.get_tip()<b.get_tip();});
+        2:   78-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   78-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   78-block  2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+branch  9 taken 1 (fallthrough)
+branch 10 taken 1
+        1:   78-block  3
+call   11 returned 1
+call   12 returned 1
+        1:   78-block  4
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   78-block  5
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   78-block  6
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+    $$$$$:   78-block  7
+    $$$$$:   78-block  8
+call   22 never executed
+    $$$$$:   78-block  9
+call   23 never executed
+    $$$$$:   78-block 10
+    $$$$$:   78-block 11
+call   24 never executed
+        1:   79:    return lista_sortata;}
+        1:   79-block  0
+        1:   79-block  1
+    $$$$$:   79-block  2
+call    0 never executed
+        -:   80:
+function _ZN7Service24goleste_lista_notificariEv called 1 returned 100% blocks executed 100%
+        1:   81:void Service::goleste_lista_notificari(){
+        1:   82:    listaNotificare.goleste_lista();
+        1:   82-block  0
+call    0 returned 1
+        1:   83:}
+        -:   84:
+function _ZN7Service23adauga_lista_notificariERKi called 3 returned 33% blocks executed 69%
+        3:   85:void Service::adauga_lista_notificari(const int& nr_apartament){
+        3:   86:    if (repo.cautareApartament(nr_apartament)) {
+        3:   86-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+        2:   87:        if (listaNotificare.cautare_apartament(nr_apartament))
+        2:   87-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        3:   88:            throw Error("Apartament deja inregistrat!\n");
+        1:   88-block  0
+call    0 returned 1
+        1:   88-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   88-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 0
+    $$$$$:   88-block  3
+    $$$$$:   88-block  4
+    $$$$$:   88-block  5
+call    7 never executed
+        1:   89:        Locatar &apartament = repo.extrageApartament(nr_apartament);
+        1:   89-block  0
+call    0 returned 1
+        1:   90:        listaNotificare.adauga_in_lista(apartament);
+call    0 returned 1
+        -:   91:    }
+        -:   92:    else
+        3:   93:        throw Error("Apartamentul nu este inregistrat!\n");
+        1:   93-block  0
+call    0 returned 1
+        1:   93-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   93-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 0
+    $$$$$:   93-block  3
+    $$$$$:   93-block  4
+    $$$$$:   93-block  5
+call    7 never executed
+        1:   94:}
+        -:   95:
+function _ZN7Service25get_size_lista_notificariEv called 8 returned 100% blocks executed 100%
+        8:   96:int Service::get_size_lista_notificari(){
+        8:   97:    return listaNotificare.size();
+        8:   97-block  0
+call    0 returned 8
+        -:   98:}
+        -:   99:
+function _ZN7Service22get_random_apartamenteERKi called 4 returned 100% blocks executed 78%
+        4:  100:int Service::get_random_apartamente(const int& nr_apartamente){
+        4:  101:    return listaNotificare.genereaza_lista(nr_apartamente,repo.extrage_Locatari());
+        4:  101-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  101-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  101-block  2
+        4:  101-block  3
+call    6 returned 4
+        4:  101-block  4
+    $$$$$:  101-block  5
+call    7 never executed
+        -:  102:}
+        -:  103:
+function _ZN7Service10export_CSVERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:  104:void Service::export_CSV(const std::string& file_path){
+        1:  105:    listaNotificare.export_CSV(file_path);
+        1:  105-block  0
+call    0 returned 1
+        1:  106:}
+        -:  107:
+function _ZN7Service17extrage_frecventeB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:  108:unordered_map<string,int> Service::extrage_frecvente(){
+        1:  109:    return frecventa_tip;
+        1:  109-block  0
+call    0 returned 1
+        -:  110:}
+        -:  111:
+function _ZN7Service27write_ListaLocatari_to_fileEv called 1 returned 100% blocks executed 100%
+        1:  112:void Service::write_ListaLocatari_to_file(){
+        1:  113:    repo.write_ListaLocatari_to_file();
+        1:  113-block  0
+call    0 returned 1
+        1:  114:}
+        -:  115:
+function _ZN7Service6doUndoEv called 4 returned 75% blocks executed 78%
+        4:  116:void Service::doUndo() {
+        4:  117:    if (UndoActions.empty())
+        4:  117-block  0
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        3:  118:        throw Error("Nu exista operatii la care sa dau undo!\n");
+        1:  118-block  0
+call    0 returned 1
+        1:  118-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  118-block  2
+call    4 returned 1
+call    5 returned 1
+call    6 returned 0
+    $$$$$:  118-block  3
+    $$$$$:  118-block  4
+    $$$$$:  118-block  5
+call    7 never executed
+        3:  119:    auto pointer=UndoActions.back();
+        3:  119-block  0
+call    0 returned 3
+        3:  120:    UndoActions.back()->doUndo();
+call    0 returned 3
+call    1 returned 3
+        3:  121:    delete pointer;
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:  121-block  0
+call    2 returned 3
+        3:  122:    UndoActions.pop_back();
+        3:  122-block  0
+call    0 returned 3
+        3:  123:}
+        -:  124:
+function _ZN7ServiceD2Ev called 13 returned 100% blocks executed 100%
+       13:  125:Service::~Service(){
+       39:  126:    for (auto pointer : UndoActions)
+       13:  126-block  0
+call    0 returned 13
+call    1 returned 13
+       26:  126-block  1
+call    2 returned 26
+       26:  126-block  2
+call    3 returned 26
+       39:  126-block  3
+call    4 returned 39
+branch  5 taken 26
+branch  6 taken 13 (fallthrough)
+       26:  127:        delete pointer;
+branch  0 taken 26 (fallthrough)
+branch  1 taken 0
+       26:  127-block  0
+call    2 returned 26
+       13:  128:    UndoActions.clear();
+       13:  128-block  0
+call    0 returned 13
+       13:  129:}
+call    0 returned 13
+call    1 returned 13
+call    2 returned 13

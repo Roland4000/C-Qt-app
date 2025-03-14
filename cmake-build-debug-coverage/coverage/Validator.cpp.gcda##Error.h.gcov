@@ -1,0 +1,31 @@
+        -:    0:Source:E:/Folders/UBB An 1 sem 2/Qtie/Error.h
+        -:    0:Graph:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Validator.cpp.gcno
+        -:    0:Data:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\Validator.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Legion user on 03.05.2024.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef QTIE_ERROR_H
+        -:    6:#define QTIE_ERROR_H
+        -:    7:
+        -:    8:#include <string>
+        -:    9:#include <utility>
+        -:   10:using std::string;
+        -:   11:
+        -:   12:class Error: public std::exception {
+        -:   13:public:
+function _ZN5ErrorC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   14:    explicit Error(string message):message(std::move(message)){};
+    %%%%%:   14-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   15:    [[nodiscard]] const string& getMessage() const;
+        -:   16:private:
+        -:   17:    string message;
+        -:   18:};
+        -:   19:
+        -:   20:
+        -:   21:
+        -:   22:#endif //QTIE_ERROR_H

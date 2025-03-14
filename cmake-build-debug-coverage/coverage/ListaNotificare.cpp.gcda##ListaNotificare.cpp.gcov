@@ -1,0 +1,274 @@
+        -:    0:Source:E:/Folders/UBB An 1 sem 2/Qtie/ListaNotificare.cpp
+        -:    0:Graph:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\ListaNotificare.cpp.gcno
+        -:    0:Data:E:\Folders\UBB An 1 sem 2\Qtie\cmake-build-debug-coverage\CMakeFiles\Qtie.dir\ListaNotificare.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "ListaNotificare.h"
+        -:    2:
+function _ZN15ListaNotificare13goleste_listaEv called 1 returned 100% blocks executed 100%
+        1:    3:void ListaNotificare::goleste_lista() {
+        1:    4:    listaApartamente.clear();
+        1:    4-block  0
+call    0 returned 1
+        1:    5:}
+        -:    6:
+function _ZN15ListaNotificare15adauga_in_listaER7Locatar called 1 returned 100% blocks executed 100%
+        1:    7:void ListaNotificare::adauga_in_lista(Locatar &apartament) {
+        1:    8:    listaApartamente.push_back(apartament);
+        1:    8-block  0
+call    0 returned 1
+        1:    9:}
+        -:   10:
+function _ZN15ListaNotificare4sizeEv called 8 returned 100% blocks executed 100%
+        8:   11:int ListaNotificare::size(){
+        8:   12:    return (int)listaApartamente.size();
+        8:   12-block  0
+call    0 returned 8
+        -:   13:}
+        -:   14:
+function _ZN15ListaNotificare15genereaza_listaERKiRKSt6vectorI7LocatarSaIS3_EE called 4 returned 100% blocks executed 78%
+        4:   15:int ListaNotificare::genereaza_lista(const int &nr_apartamente, const vector<Locatar>& lista_locatari) {
+        4:   16:    vector<Locatar> locatari_neplasati;
+        4:   16-block  0
+call    0 returned 4
+       16:   17:    for (const auto& loc1 : lista_locatari) {
+call    0 returned 4
+call    1 returned 4
+       12:   17-block  0
+call    2 returned 12
+       12:   17-block  1
+call    3 returned 12
+       16:   17-block  2
+call    4 returned 16
+branch  5 taken 12
+branch  6 taken 4 (fallthrough)
+       12:   18:        bool situat=false;
+       24:   19:        for (const auto& loc2: listaApartamente)
+call    0 returned 12
+call    1 returned 12
+       12:   19-block  0
+call    2 returned 12
+       12:   19-block  1
+call    3 returned 12
+       24:   19-block  2
+call    4 returned 24
+branch  5 taken 12
+branch  6 taken 12 (fallthrough)
+       12:   20:            if (loc1.get_proprietar()==loc2.get_proprietar())
+call    0 returned 12
+branch  1 taken 12 (fallthrough)
+branch  2 taken 0 (throw)
+       12:   20-block  0
+call    3 returned 12
+branch  4 taken 12 (fallthrough)
+branch  5 taken 0 (throw)
+       12:   20-block  1
+call    6 returned 12
+call    7 returned 12
+call    8 returned 12
+branch  9 taken 4 (fallthrough)
+branch 10 taken 8
+    $$$$$:   20-block  2
+    $$$$$:   20-block  3
+call   11 never executed
+    $$$$$:   20-block  4
+        4:   21:                situat=true;
+        4:   21-block  0
+       12:   22:        if (!situat)
+       12:   22-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 4
+        8:   23:            locatari_neplasati.push_back(loc1);
+        8:   23-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   24:    }
+        4:   25:    int nr_loc=(int)locatari_neplasati.size();
+        4:   25-block  0
+call    0 returned 4
+        4:   26:    int rezultat_functie=0;
+        4:   27:    if (nr_loc<nr_apartamente){
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:   28:        rezultat_functie=1;
+        4:   29:        for (const auto& loc : locatari_neplasati)
+        2:   29-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   29-block  1
+call    2 returned 2
+        2:   29-block  2
+call    3 returned 2
+        4:   29-block  3
+call    4 returned 4
+branch  5 taken 2
+branch  6 taken 2 (fallthrough)
+        2:   30:            listaApartamente.push_back(loc);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   31:    }
+        -:   32:    else{
+        6:   33:        for (int i=0;i<nr_apartamente;i++){
+        2:   33-block  0
+        6:   33-block  1
+branch  0 taken 4
+branch  1 taken 2 (fallthrough)
+        4:   34:            int size=(int)locatari_neplasati.size();
+        4:   34-block  0
+call    0 returned 4
+        4:   35:            std::random_device rd;
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   36:            std::mt19937 gen(rd());
+        4:   36-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   36-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   37:            std::uniform_int_distribution<> dis(0, size-1);
+        4:   37-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   38:            int randomNumber = dis(gen);
+        4:   38-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   39:            listaApartamente.push_back(locatari_neplasati[randomNumber]);
+        4:   39-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   40:            locatari_neplasati.erase(locatari_neplasati.begin()+randomNumber);
+        4:   40-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+    $$$$$:   40-block  1
+    $$$$$:   40-block  2
+    $$$$$:   40-block  3
+        4:   41:        }
+        4:   41-block  0
+call    0 returned 4
+    $$$$$:   41-block  1
+call    1 never executed
+        -:   42:    }
+        4:   43:    return rezultat_functie;
+        4:   43-block  0
+        4:   44:}
+        4:   44-block  0
+call    0 returned 4
+    $$$$$:   44-block  1
+call    1 never executed
+        -:   45:
+function _ZN15ListaNotificare10export_CSVERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 74%
+        1:   46:void ListaNotificare::export_CSV(const std::string& file_path){
+        1:   47:    std::ofstream fout = std::ofstream(file_path);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   48:    for (const auto& apartament : listaApartamente)
+        1:   48-block  0
+call    0 returned 1
+call    1 returned 1
+        3:   48-block  1
+call    2 returned 3
+        4:   48-block  2
+call    3 returned 4
+branch  4 taken 3
+branch  5 taken 1 (fallthrough)
+        3:   49:        fout<<apartament.get_apartament()<<","<<apartament.get_proprietar()<<","<<apartament.get_suprafata()<<","<<apartament.get_tip()<<"\n";
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   49-block  0
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   49-block  1
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   49-block  2
+call    9 returned 3
+branch 10 taken 3 (fallthrough)
+branch 11 taken 0 (throw)
+        3:   49-block  3
+call   12 returned 3
+branch 13 taken 3 (fallthrough)
+branch 14 taken 0 (throw)
+        3:   49-block  4
+call   15 returned 3
+branch 16 taken 3 (fallthrough)
+branch 17 taken 0 (throw)
+        3:   49-block  5
+call   18 returned 3
+branch 19 taken 3 (fallthrough)
+branch 20 taken 0 (throw)
+        3:   49-block  6
+call   21 returned 3
+branch 22 taken 3 (fallthrough)
+branch 23 taken 0 (throw)
+        3:   49-block  7
+call   24 returned 3
+branch 25 taken 3 (fallthrough)
+branch 26 taken 0 (throw)
+        3:   49-block  8
+call   27 returned 3
+branch 28 taken 3 (fallthrough)
+branch 29 taken 0 (throw)
+        3:   49-block  9
+call   30 returned 3
+branch 31 taken 3 (fallthrough)
+branch 32 taken 0 (throw)
+        3:   49-block 10
+call   33 returned 3
+branch 34 taken 3 (fallthrough)
+branch 35 taken 0 (throw)
+        3:   49-block 11
+call   36 returned 3
+call   37 returned 3
+call   38 returned 3
+    $$$$$:   49-block 12
+call   39 never executed
+    $$$$$:   49-block 13
+    $$$$$:   49-block 14
+call   40 never executed
+    $$$$$:   49-block 15
+        1:   50:    fout.close();
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51:}
+        1:   51-block  0
+call    0 returned 1
+    $$$$$:   51-block  1
+call    1 never executed
+        -:   52:/*
+        -:   53:vector<Locatar> ListaNotificare::extrage_listaNotificari(){
+        -:   54:    return listaApartamente;
+        -:   55:}
+        -:   56:*/
+function _ZN15ListaNotificare18cautare_apartamentERKi called 2 returned 100% blocks executed 100%
+        2:   57:bool ListaNotificare::cautare_apartament(const int& nr_apartament){
+function _ZZN15ListaNotificare18cautare_apartamentERKiENKUlRK7LocatarE_clES4_ called 1 returned 100% blocks executed 100%
+        3:   58:    return any_of(listaApartamente.begin(),listaApartamente.end(),[&nr_apartament](const Locatar& a){return a.get_apartament()==nr_apartament;});
+        2:   58-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+        1:   58-block  1
+call    3 returned 1
+        -:   59:}
